@@ -1,0 +1,77 @@
+.formContent {
+  .formGroup {
+    margin-bottom: 16px;
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+  }
+}
+
+.modal {
+  &__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+
+  &__footer {
+    margin-top: 24px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+  }
+}
+
+.cancelButton {
+  padding: 8px 16px;
+  background: #f5f5f5;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.saveButton {
+  padding: 8px 16px;
+  background: #0066cc;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form-group {
+  position: relative;
+  width: 100%;
+}
+
+.select-label {
+  top: -25px;
+  left: 5px;
+  position: absolute;
+  font-size: 16px;
+  color: black;
+  font-weight: 500;
+}
+
+.custom-select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  font-size: 14px;
+  color: #333;
+  appearance: none;
+  cursor: pointer;
+  transition: border-color 0.3s;
+
+  &:hover, &:focus-within {
+    outline: none;
+    border: 1px solid green;
+  }
+}

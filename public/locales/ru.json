@@ -1,0 +1,676 @@
+{
+  "application": {
+    "project": {
+      "types": {
+        "project_type_1": "Фасады",
+        "project_type_2": "Комнаты"
+      }
+    }
+  },
+  "components": {
+    "admin": {
+      "equipment_modal": {
+        "button_create": "Создать",
+        "button_update": "Обновить",
+        "description": "Описание",
+        "description_placeholder": "Введите описание оборудования",
+        "equipment_create_failed": "Не удалось создать оборудование",
+        "equipment_created": "Оборудование успешно создано",
+        "equipment_update_failed": "Не удалось обновить оборудование",
+        "equipment_updated": "Оборудование успешно обновлено",
+        "error_loading_equipments": "Ошибка загрузки оборудования",
+        "header_create": "Создать оборудование",
+        "header_update": "Редактировать оборудование",
+        "model": "Модель",
+        "model_placeholder": "Введите модель оборудования",
+        "name": "Название",
+        "name_placeholder": "Введите название оборудования",
+        "serial_number": "Серийный номер",
+        "serial_number_placeholder": "Введите серийный номер оборудования"
+      },
+      "equipment_table": {
+        "component_title": "Управление оборудованием",
+        "confirm_delete_message": "Вы уверены, что хотите удалить это оборудование?",
+        "equipment_delete_failed": "Не удалось удалить оборудование",
+        "equipment_deleted": "Оборудование успешно удалено",
+        "no_equipments": "Оборудование не найдено",
+        "table_column_description": "Описание",
+        "table_column_model": "Модель",
+        "table_column_name": "Название",
+        "table_column_serial_number": "Серийный номер"
+      },
+      "permission_modal": {
+        "button_update": "Обновить",
+        "description": "Описание",
+        "description_placeholder": "Введите описание разрешения",
+        "error_loading_permissions": "Ошибка загрузки разрешений",
+        "header_update": "Редактировать разрешение",
+        "name": "Название",
+        "name_placeholder": "Введите название разрешения",
+        "no_permission_selected": "Разрешение не выбрано",
+        "permission_update_failed": "Не удалось обновить разрешение",
+        "permission_updated": "Разрешение успешно обновлено"
+      },
+      "permissions_table": {
+        "component_title": "Управление разрешениями",
+        "table_column_description": "Описание",
+        "table_column_name": "Название"
+      },
+      "project_types_with_statuses_manager": {
+        "fetch_error": "Ошибка загрузки типов проектов с статусами",
+        "no_project_types": "Типы проектов не найдены"
+      },
+      "role_modal": {
+        "button_create": "Создать",
+        "button_update": "Обновить",
+        "description": "Описание",
+        "description_placeholder": "Введите описание роли",
+        "error_loading_roles": "Ошибка загрузки ролей",
+        "header_create": "Создать роль",
+        "header_update": "Редактировать роль",
+        "name": "Название",
+        "name_placeholder": "Введите название роли",
+        "permissions": "Разрешения",
+        "role_create_failed": "Не удалось создать роль",
+        "role_created": "Роль успешно создана",
+        "role_update_failed": "Не удалось обновить роль",
+        "role_updated": "Роль успешно обновлена"
+      },
+      "roles_table": {
+        "component_title": "Управление ролями",
+        "confirm_delete_message": "Вы уверены, что хотите удалить эту роль?",
+        "role_delete_failed": "Не удалось удалить роль",
+        "role_deleted": "Роль успешно удалена",
+        "table_column_description": "Описание",
+        "table_column_name": "Название",
+        "table_column_permissions": "Разрешения"
+      },
+      "specialization_modal": {
+        "button_create": "Создать",
+        "button_update": "Обновить",
+        "error_occurred": "Произошла ошибка. Обратитесь к администратору",
+        "header_create": "Создать специализацию",
+        "header_update": "Редактировать специализацию",
+        "icon_index": "Иконка",
+        "specialization_created": "Специализация успешно создана",
+        "specialization_updated": "Специализация успешно обновлена",
+        "title": "Название",
+        "title_placeholder": "Введите название специализации"
+      },
+      "specializations_manager": {
+        "component_title": "Управление специализациями",
+        "confirm_delete_message": "Вы уверены, что хотите удалить эту специализацию?",
+        "error_occurred": "Произошла ошибка. Обратитесь к администратору",
+        "specialization_deleted": "Специализация успешно удалена",
+        "table_column_icon_index": "Иконка",
+        "table_column_title": "Название"
+      },
+      "status_group_card": {
+        "button_delete": "Удалить",
+        "button_edit": "Редактировать"
+      },
+      "status_group_modal": {
+        "button_create": "Создать",
+        "button_update": "Обновить",
+        "color": "Цвет",
+        "header_create": "Создать группу статусов",
+        "header_update": "Редактировать группу статусов",
+        "project_type": "Тип проекта",
+        "select_project_type": "Выберите тип проекта",
+        "status_group_create_failed": "Не удалось создать группу статусов",
+        "status_group_created": "Группа статусов успешно создана",
+        "status_group_update_failed": "Не удалось обновить группу статусов",
+        "status_group_updated": "Группа статусов успешно обновлена",
+        "title": "Название",
+        "title_placeholder": "Введите название группы статусов"
+      },
+      "status_groups_manager": {
+        "button_cancel": "Отмена",
+        "button_confirm": "Подтвердить",
+        "button_create": "Создать группу статусов",
+        "component_title": "Управление группами статусов",
+        "confirm_delete_message": "Вы уверены, что хотите удалить эту группу статусов?",
+        "confirm_delete_title": "Подтверждение удаления",
+        "delete_error": "Не удалось удалить группу статусов",
+        "fetch_error": "Ошибка загрузки групп статусов",
+        "status_group_deleted": "Группа статусов успешно удалена"
+      },
+      "team_modal": {
+        "button_create": "Создать",
+        "button_update": "Обновить",
+        "description": "Описание",
+        "description_placeholder": "Введите описание команды",
+        "equipments": "Оборудование",
+        "header_create": "Создать команду",
+        "header_update": "Редактировать команду",
+        "specialization": "Специализация",
+        "team_created": "Команда успешно создана",
+        "team_updated": "Команда успешно обновлена",
+        "title": "Название",
+        "title_placeholder": "Введите название команды",
+        "users": "Пользователи"
+      },
+      "teams_table": {
+        "component_title": "Управление командами",
+        "confirm_delete_message": "Вы уверены, что хотите удалить эту команду?",
+        "error_occurred": "Произошла ошибка",
+        "table_column_description": "Описание",
+        "table_column_equipments": "Оборудование",
+        "table_column_specialization": "Иконка",
+        "table_column_title": "Название",
+        "table_column_users": "Пользователи",
+        "team_deleted": "Команда успешно удалена"
+      },
+      "user_modal": {
+        "button_create": "Создать",
+        "button_update": "Обновить",
+        "change_password": "Поменять пароль",
+        "email": "Электронная почта",
+        "email_placeholder": "Введите электронную почту",
+        "error_occurred": "Произошла ошибка. Обратитесь к администратору",
+        "first_name": "Имя",
+        "first_name_placeholder": "Введите имя",
+        "header_create": "Создать пользователя",
+        "header_update": "Редактировать пользователя",
+        "last_name": "Фамилия",
+        "last_name_placeholder": "Введите фамилию",
+        "login": "Логин",
+        "login_placeholder": "Введите логин",
+        "password": "Пароль",
+        "password_confirmation": "Подтверждение пароля",
+        "password_confirmation_placeholder": "Подтвердите пароль",
+        "password_placeholder": "Введите пароль",
+        "permissions": "Разрешения",
+        "phones": "Телефоны",
+        "roles": "Роли",
+        "user_created": "Пользователь успешно создан",
+        "user_updated": "Пользователь успешно обновлен"
+      },
+      "users_manager": {
+        "component_title": "Управление пользователями",
+        "confirm_delete_message": "Вы уверены, что хотите удалить этого пользователя?",
+        "error_occurred": "Произошла ошибка. Обратитесь к администратору",
+        "table_column_email": "Электронная почта",
+        "table_column_login": "Логин",
+        "table_column_name": "Имя",
+        "table_column_permissions": "Разрешения",
+        "table_column_phones": "Телефоны",
+        "table_column_roles": "Роли",
+        "user_deleted": "Пользователь успешно удален"
+      }
+    },
+    "common": {
+      "select": {
+        "element_type_select": {
+          "placeholder": "Выберите тип элемента"
+        },
+        "equipment_select": {
+          "placeholder": "Выберите оборудование"
+        },
+        "equipments": "Краны:",
+        "error_loading_equipments": "Ошибка загрузки оборудования",
+        "facade_direction": {
+          "direction_east": "Восток",
+          "direction_north": "Север",
+          "direction_north_east": "Северо-восток",
+          "direction_north_west": "Северо-запад",
+          "direction_south": "Юг",
+          "direction_south_east": "Юго-восток",
+          "direction_south_west": "Юго-запад",
+          "direction_west": "Запад",
+          "placeholder": "Выберите направление фасада"
+        },
+        "facade_group_select": {
+          "placeholder": "Выберите группу фасадов"
+        },
+        "hours": "Часы",
+        "permission_select": {
+          "placeholder": "Выберите разрешение"
+        },
+        "plus_equipment": "+ Оборудование",
+        "plus_user": "+ Пользователь",
+        "role_select": {
+          "placeholder": "Выберите роль"
+        },
+        "select_author": {
+          "placeholder": "Выберите автора"
+        },
+        "select_project_type": {
+          "placeholder": "Выберите тип проекта"
+        },
+        "select_status": {
+          "placeholder": "Выберите статус"
+        },
+        "select_team": {
+          "placeholder": "Выберите команду"
+        },
+        "specialization_select": {
+          "placeholder": "Выберите специализацию"
+        },
+        "team_role": {
+          "assistant": "Ассистент",
+          "intern": "Стажер",
+          "leader": "Лидер",
+          "placeholder": "Выберите роль команды"
+        },
+        "user_select": {
+          "placeholder": "Выберите пользователя"
+        },
+        "user_select_project_page": {
+          "placeholder": "Выберите пользователей"
+        },
+        "users": "Пользователи:"
+      },
+      "switcher": {
+        "theme": {
+          "darkMode": "Темная",
+          "lightMode": "Светлая"
+        }
+      }
+    },
+    "dashboard": {
+      "projects_table": {
+        "no_projects": "Нет проектов",
+        "no_tickets": "Нет тикетов",
+        "table_column_created_at": "Создан",
+        "table_column_name": "Название",
+        "table_column_tickets": "Тикеты",
+        "table_column_type": "Тип",
+        "table_column_view": "Просмотр"
+      }
+    },
+    "interface": {
+      "header": {
+        "admin-panel": "Панель администратора",
+        "dashboard": "Главная страница",
+        "logout": "Выход",
+        "profile": "Профиль",
+        "supervisor-panel": "Панель руководителя",
+        "user_is": "Пользователь"
+      }
+    },
+    "modal": {
+      "confirmation_modal": {
+        "button_cancel": "Отмена",
+        "button_confirm": "Подтвердить",
+        "confirm_action": "Подтверждение действия"
+      }
+    },
+    "project": {
+      "elements": {
+        "fpsm": {
+          "Messages": {
+            "assign_summary": "Создано статусов: {{createdStatusesCount}}, существующих статусов: {{existingStatusesCount}}, создано тикетов: {{createdTicketsCount}}"
+          }
+        }
+      },
+      "facade_view_page": {
+        "page_mode": {
+          "editing": "Редактирование",
+          "mode": "Режим",
+          "viewing": "Просмотр"
+        }
+      },
+      "facades": {
+        "facade_card": {
+          "confirm_delete_message": "Вы уверены, что хотите удалить этот фасад?",
+          "delete_error": "Не удалось удалить фасад",
+          "facade_deleted": "Фасад успешно удален"
+        },
+        "facade_view_page": {
+          "element_inspector_actions": {
+            "actions": "Действия",
+            "createGroup": "Создать новую группу с выбранными элементами",
+            "newGroup": "Новая группа"
+          },
+          "element_inspector_form": {
+            "deleteElements": "Удалить элементы",
+            "id": "ID",
+            "label_bottom": "Y",
+            "label_height": "Высота",
+            "label_left": "X",
+            "label_width": "Ширина",
+            "loading": "Загрузка...",
+            "placeholder_bottom": "Установить Y",
+            "placeholder_bottomDelta": "Добавить Y",
+            "placeholder_height": "Установить высоту",
+            "placeholder_heightDelta": "Добавить высоту",
+            "placeholder_left": "Установить X",
+            "placeholder_leftDelta": "Добавить X",
+            "placeholder_width": "Установить ширину",
+            "placeholder_widthDelta": "Добавить ширины",
+            "title": "Название",
+            "type": "Тип",
+            "updateElements": "Обновить элементы",
+            "value_add": "Добавить",
+            "value_set": "Установить"
+          },
+          "element_inspector_panel": {
+            "deselectAll": "Снять выделение",
+            "elements": "элементов",
+            "selectAll": "Выбрать все",
+            "selected": "Выбрано"
+          },
+          "element_orders_table": {
+            "addButton": "Добавить новый материал",
+            "columns": {
+              "height": "Высота",
+              "m2": "м2",
+              "note": "Заметка",
+              "price": "Цена",
+              "side": "Сторона",
+              "SKU": "SKU",
+              "title": "Название",
+              "width": "Ширина"
+            },
+            "side_select_potions": {
+              "bottom": "Низ",
+              "entire_element": "Весь элемент",
+              "left": "Слева",
+              "right": "Справа",
+              "top": "Верх"
+            },
+            "title": "Таблица материалов"
+          },
+          "navigation_bar": {
+            "backward": "Назад",
+            "forward": "Вперед",
+            "toHome": "Домашняя страница"
+          },
+          "object_inspector": {
+            "tabs": {
+              "element": "элементы",
+              "elementChanges": "Редактирование элементов",
+              "elementMaterials": "Материалы элементов",
+              "elementTickets": "Тикеты элементов"
+            },
+            "title": "Инспектор объектов"
+          },
+          "tree_view": {
+            "context_menu": {
+              "create_cluster": "Создание нового кластера",
+              "create_group": "Создание новой группы",
+              "create_layer": "Создание нового слоя"
+            },
+            "group_modal": {
+              "cluster_name": "Название кластера",
+              "create_cluster": "Создание кластера",
+              "create_layer": "Создание слоя",
+              "error_field": "Введите название",
+              "group_name": "Название группы",
+              "group_title": "Создание группы",
+              "layer_name": "Название слоя",
+              "ok_btn": "ОК",
+              "parent_cluster": "Родительский кластер",
+              "parent_layer": "Родительский слой"
+            }
+          }
+        },
+        "fpsmstatus_management": {
+          "save_and_close": "Сохранить и закрыть",
+          "save_and_next_day": "Сохранить и на следующий день",
+          "selected_elements": "Выбранные элементы"
+        },
+        "group_facades": {
+          "button_create_facade": "Создать фасад",
+          "confirm_delete_message": "Вы уверены, что хотите удалить эту группу фасадов?",
+          "delete_error": "Не удалось удалить группу фасадов",
+          "group_facade_deleted": "Группа фасадов успешно удалена",
+          "new_facade_group_label": "Новая группа фасадов"
+        },
+        "modals": {
+          "facade_edit_modal": {
+            "button_cancel": "Отмена",
+            "button_save": "Сохранить",
+            "direction": "Направление",
+            "direction_placeholder": "Введите направление",
+            "error_occurred": "Произошла ошибка",
+            "facade_created": "Фасад успешно создан",
+            "facade_updated": "Фасад успешно обновлен",
+            "group_facade": "Группа фасадов",
+            "header_create": "Создать фасад",
+            "header_update": "Редактировать фасад",
+            "properties": {
+              "accordion_properties_title": "Параметры",
+              "current": "Текущее значение",
+              "current_placeholder": "Введите текущее значение",
+              "lifting_point": "Точка подъема",
+              "lifting_point_placeholder": "Введите точку подъема",
+              "max": "Максимальное значение",
+              "max_placeholder": "Введите максимальное значение",
+              "min": "Минимальное значение",
+              "min_placeholder": "Введите минимальное значение"
+            },
+            "title": "Название фасада",
+            "title_placeholder": "Введите название фасада"
+          },
+          "facade_group_edit_modal": {
+            "button_cancel": "Отмена",
+            "button_save": "Сохранить",
+            "error_occurred": "Произошла ошибка",
+            "group_facade_created": "Группа фасадов успешно создана",
+            "group_facade_updated": "Группа фасадов успешно обновлена",
+            "header_create": "Создать группу фасадов",
+            "header_update": "Редактировать группу фасадов",
+            "title": "Название группы фасадов",
+            "title_placeholder": "Введите название группы фасадов"
+          }
+        },
+        "page_mode": {
+          "editing": "Редактирование",
+          "mode": "Режим",
+          "viewing": "Просмотр"
+        }
+      },
+      "rooms": {
+        "grid_buttons": {
+          "deselect_all": "Отменить все",
+          "select_all": "Выбрать все"
+        },
+        "main": {
+          "switch_staircase_draw_type_component": {
+            "apartments": "Квартиры",
+            "rooms": "Комнаты"
+          }
+        },
+        "modals": {
+          "edit_apartment_modal": {
+            "apartment_number": "Номер квартиры",
+            "apartment_number_placeholder": "Введите номер квартиры",
+            "apartment_updated": "Квартира успешно обновлена",
+            "button_cancel": "Отмена",
+            "button_save": "Сохранить",
+            "error_occurred": "Произошла ошибка",
+            "header_update": "Редактировать квартиру",
+            "mailbox_name": "Название почтового ящика",
+            "mailbox_name_placeholder": "Введите название почтового ящика"
+          },
+          "edit_layout_staircase_modal": {
+            "button_cancel": "Отмена",
+            "button_save": "Сохранить",
+            "error_occurred": "Произошла ошибка",
+            "header_update": "Изменить название столбца",
+            "layout_updated": "Макет успешно обновлен",
+            "title": "Название"
+          },
+          "edit_room_modal": {
+            "button_cancel": "Отмена",
+            "button_save": "Сохранить",
+            "error_occurred": "Произошла ошибка",
+            "header_update": "Редактировать комнату",
+            "room_name": "Название комнаты",
+            "room_name_placeholder": "Введите название комнаты",
+            "room_updated": "Комната успешно обновлена"
+          },
+          "edit_staircase_modal": {
+            "button_cancel": "Отмена",
+            "button_save": "Сохранить",
+            "error_occurred": "Произошла ошибка",
+            "header_update": "Редактировать подъезд",
+            "staircase_updated": "Подъезд успешно обновлен",
+            "title": "Название подъезда",
+            "title_placeholder": "Введите название подъезда"
+          },
+          "status_duplicate_modal": {
+            "option_create_new_tickets": "Создать новые тикеты не удаляя старые тикеты",
+            "option_delete_old_create_new": "Удалить старые тикеты, и затем создать новые",
+            "option_no_new_tickets": "Не создавать новые тикеты",
+            "title": "Выберите действие"
+          }
+        },
+        "psm": {
+          "Messages": {
+            "assign_summary": "Создано статусов: {{createdStatusesCount}}, существующих статусов: {{existingStatusesCount}}, создано тикетов: {{createdTicketsCount}}"
+          },
+          "no_statuses_available": "Нет доступных статусов",
+          "select_statuses_placeholder": "Выберите статусы",
+          "status_assignment_controls": {
+            "by_teams": "По командам",
+            "deadline": "Крайний срок",
+            "end": "Конец",
+            "inform_client": "Информировать клиента",
+            "mark_work": "Отметить работы",
+            "markall": "Отметить все",
+            "clearall": "Очистить все",
+            "pick_statuses": "Выбрать статусы",
+            "plan_work": "Планировать работы",
+            "send": "Отправить",
+            "send_to_client": "Отправить клиенту",
+            "send_to_workers": "Отправить работникам",
+            "sending": "Отправляется!",
+            "sent": "Отправлено",
+            "sent_countdown": "Отправляется! {{count}}с",
+            "sent_countdown_one": "Отправляется! {{count}}с",
+            "sent_countdown_few": "Отправляется! {{count}}с",
+            "sent_countdown_many": "Отправляется! {{count}}с",
+            "sent_countdown_other": "Отправляется! {{count}}с",
+            "start": "Начало",
+            "team": "Команда",
+            "user": "Пользователь"
+          },
+          "statuses_selected_one": "Выбрано статусов: {{count}}",
+          "statuses_selected_few": "Выбрано статусов: {{count}}",
+          "statuses_selected_many": "Выбрано статусов: {{count}}",
+          "statuses_selected_other": "Выбрано статусов: {{count}}"
+        },
+        "psmstatus_management": {
+          "save_and_close": "Сохранить и закрыть",
+          "save_and_next_day": "Сохранить и на следующий день",
+          "selected_apartments": "Выбранные квартиры"
+        },
+        "tf": {
+          "Files": {
+            "files": "Файлы"
+          },
+          "Form": {
+            "accordion_title_files": "Файлы",
+            "accordion_title_times": "Время",
+            "accordion_title_users": "Пользователи",
+            "author": "Автор",
+            "closed": "Закрыто",
+            "content": "Содержание",
+            "create": "Создать",
+            "critical_problem": "Критическая проблема",
+            "criticality": "Критичность",
+            "deadline": "Крайний срок",
+            "delete": "Удалить",
+            "end": "Конец",
+            "hour_estimate": "Часовая оценка",
+            "in_progress": "В процессе",
+            "message_client": "Сообщение клиенту",
+            "no_problem": "Нет проблемы",
+            "opened": "Открыто",
+            "problem": "Проблема",
+            "readiness": "Готовность",
+            "save": "Сохранить",
+            "start": "Начало",
+            "teams": "Команды",
+            "title": "Название",
+            "tja": "TJA",
+            "tooltip_text": "TT = Часы на задачу.\nATA = Часы автора тикета.\nTJA = Оценка часов руководителя.\nTTA = Оценка часов сотрудника.",
+            "tt": "TT",
+            "tta": "TTA",
+            "user_ids": "Пользователи",
+            "week_estimate": "Недельная оценка"
+          },
+          "Messages": {
+            "create_failure": "Создание не удалось",
+            "create_success": "Создание успешно",
+            "delete_failure": "Удаление не удалось",
+            "delete_success": "Удаление успешно",
+            "update_failure": "Обновление не удалось",
+            "update_success": "Обновление успешно"
+          }
+        }
+      },
+      "work_statuses": {
+        "status": {
+          "description": "Описание статуса",
+          "previous_statuses": "Предыдущие статусы"
+        }
+      }
+    },
+    "supervisor": {
+      "project_modal": {
+        "button_create": "Создать",
+        "button_update": "Обновить",
+        "description": "Описание проекта",
+        "description_placeholder": "Введите описание проекта",
+        "header_create": "Создать проект",
+        "header_update": "Редактировать проект",
+        "title": "Название проекта",
+        "title_placeholder": "Введите название проекта",
+        "type": "Тип проекта",
+        "type_placeholder": "Выберите тип проекта",
+        "users_roles": "Добавленные пользователи"
+      },
+      "projects_manager": {
+        "component_title": "Управление проектами",
+        "confirm_delete_hard_message": "Вы уверены, что хотите полностью удалить этот проект?",
+        "confirm_delete_message": "Вы уверены, что хотите удалить этот проект?",
+        "confirm_restore_message": "Вы уверены, что хотите восстановить этот проект?",
+        "project_deleted": "Проект успешно удален",
+        "project_deleted_hard": "Проект полностью удален",
+        "project_restored": "Проект успешно восстановлен",
+        "project_status_active": "Активен",
+        "project_status_deleted": "Удален",
+        "table_column_deleted": "Удален",
+        "table_column_title": "Название",
+        "table_column_type": "Тип"
+      }
+    }
+  },
+  "pages": {
+    "admin_page": {
+      "permissions": "Права",
+      "roles": "Роли",
+      "specializations": "Специализации",
+      "tab_users": "Пользователи"
+    },
+    "dashboard_page": {
+      "title": "Проекты"
+    },
+    "login_page": {
+      "button": "Войти",
+      "password": "Пароль",
+      "password_placeholder": "Введите пароль",
+      "username": "Имя пользователя",
+      "username_placeholder": "Введите имя пользователя"
+    },
+    "not_found_page": {
+      "button": "Вернуться на главную",
+      "title": "Ошибка 404. Cтраница не найдена"
+    },
+    "project_page": {
+      "error_loading_project": "Ошибка загрузки проекта",
+      "loading": "Загрузка...",
+      "project": "Проект",
+      "project_not_found": "Проекты не найдены"
+    },
+    "supervisor_page": {
+      "tab_equipments": "Оборудование",
+      "tab_projects": "Проекты",
+      "tab_teams": "Команды"
+    }
+  }
+}

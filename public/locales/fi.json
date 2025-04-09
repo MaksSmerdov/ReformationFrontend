@@ -1,0 +1,672 @@
+{
+  "application": {
+    "project": {
+      "types": {
+        "project_type_1": "Julkisivut",
+        "project_type_2": "Sisäeditori"
+      }
+    }
+  },
+  "components": {
+    "admin": {
+      "equipment_modal": {
+        "button_create": "Luo",
+        "button_update": "Päivitä",
+        "description": "Kuvaus",
+        "description_placeholder": "Anna laitteen kuvaus",
+        "equipment_create_failed": "Laitteen luominen epäonnistui.",
+        "equipment_created": "Laite luotu onnistuneesti.",
+        "equipment_update_failed": "Laitteen päivittäminen epäonnistui.",
+        "equipment_updated": "Laite päivitetty onnistuneesti.",
+        "error_loading_equipments": "Laitteiden lataaminen epäonnistui.",
+        "header_create": "Luo laite",
+        "header_update": "Muokkaa laitetta",
+        "model": "Malli",
+        "model_placeholder": "Anna laitteen malli",
+        "name": "Nimi",
+        "name_placeholder": "Anna laitteen nimi",
+        "serial_number": "Sarjanumero",
+        "serial_number_placeholder": "Anna laitteen sarjanumero"
+      },
+      "equipment_table": {
+        "component_title": "Laitteiden hallinta",
+        "confirm_delete_message": "Oletko varma, että haluat poistaa tämän laitteen?",
+        "equipment_delete_failed": "Laitteen poisto epäonnistui.",
+        "equipment_deleted": "Laite poistettu onnistuneesti.",
+        "no_equipments": "Ei laitteita.",
+        "table_column_description": "Kuvaus",
+        "table_column_model": "Malli",
+        "table_column_name": "Nimi",
+        "table_column_serial_number": "Sarjanumero"
+      },
+      "permission_modal": {
+        "button_update": "Päivitä",
+        "description": "Kuvaus",
+        "description_placeholder": "Luvan kuvaus",
+        "error_loading_permissions": "Lupien lataaminen epäonnistui.",
+        "header_update": "Muokkaa lupaa",
+        "name": "Nimi",
+        "name_placeholder": "Luvan nimi",
+        "no_permission_selected": "Ei lupaa valittuna.",
+        "permission_update_failed": "Luvan päivittäminen epäonnistui.",
+        "permission_updated": "Lupa päivitetty onnistuneesti."
+      },
+      "permissions_table": {
+        "component_title": "Lupien hallinta",
+        "table_column_description": "Kuvaus",
+        "table_column_name": "Nimi"
+      },
+      "project_types_with_statuses_manager": {
+        "fetch_error": "Projektityyppien hakeminen epäonnistui.",
+        "no_project_types": "Ei projektityyppejä."
+      },
+      "role_modal": {
+        "button_create": "Luo",
+        "button_update": "Päivitä",
+        "description": "Kuvaus",
+        "description_placeholder": "Anna roolin kuvaus",
+        "error_loading_roles": "Roolien lataaminen epäonnistui.",
+        "header_create": "Luo rooli",
+        "header_update": "Muokkaa roolia",
+        "name": "Nimi",
+        "name_placeholder": "Anna roolin nimi",
+        "permissions": "Oikeudet",
+        "role_create_failed": "Roolin luominen epäonnistui.",
+        "role_created": "Rooli luotu.",
+        "role_update_failed": "Roolin päivittäminen epäonnistui.",
+        "role_updated": "Rooli päivitetty."
+      },
+      "roles_table": {
+        "component_title": "Roolien hallinta",
+        "confirm_delete_message": "Oletko varma, että haluat poistaa tämän roolin?",
+        "role_delete_failed": "Roolin poisto epäonnistui.",
+        "role_deleted": "Rooli poistettu.",
+        "table_column_description": "Kuvaus",
+        "table_column_name": "Nimi",
+        "table_column_permissions": "Oikeudet"
+      },
+      "specialization_modal": {
+        "button_create": "Luo",
+        "button_update": "Päivitä",
+        "error_occurred": "Tapahtui virhe. Ota yhteyttä ylläpitoon.",
+        "header_create": "Luo erikoistuminen",
+        "header_update": "Muokkaa erikoistumista",
+        "icon_index": "Ikoni",
+        "specialization_created": "Erikoistuminen luotu onnistuneesti.",
+        "specialization_updated": "Erikoistuminen päivitetty onnistuneesti.",
+        "title": "Nimi",
+        "title_placeholder": "Syötä erikoistumisen nimi"
+      },
+      "specializations_manager": {
+        "component_title": "Erikoistumisten hallinta",
+        "confirm_delete_message": "Oletko varma, että haluat poistaa tämän erikoistumisen?",
+        "error_occurred": "Tapahtui virhe. Ota yhteyttä ylläpitoon.",
+        "specialization_deleted": "Erikoistuminen poistettu onnistuneesti.",
+        "table_column_icon_index": "Ikoni",
+        "table_column_title": "Nimi"
+      },
+      "status_group_card": {
+        "button_delete": "Poista",
+        "button_edit": "Muokkaa"
+      },
+      "status_group_modal": {
+        "button_create": "Luo",
+        "button_update": "Päivitä",
+        "color": "Väri",
+        "header_create": "Luo statusryhmä",
+        "header_update": "Muokkaa statusryhmää",
+        "project_type": "Projektityyppi",
+        "select_project_type": "Valitse projektityyppi",
+        "status_group_create_failed": "Statusryhmän luominen epäonnistui.",
+        "status_group_created": "Statusryhmä luotu onnistuneesti.",
+        "status_group_update_failed": "Statusryhmän päivittäminen epäonnistui.",
+        "status_group_updated": "Statusryhmä päivitetty onnistuneesti.",
+        "title": "Nimi",
+        "title_placeholder": "Syötä statusryhmän nimi"
+      },
+      "status_groups_manager": {
+        "button_cancel": "Peruuta",
+        "button_confirm": "Vahvista",
+        "button_create": "Luo statusryhmä",
+        "component_title": "Statusryhmien hallinta",
+        "confirm_delete_message": "Oletko varma, että haluat poistaa tämän statusryhmän?",
+        "confirm_delete_title": "Poiston vahvistus",
+        "delete_error": "Statusryhmän poisto epäonnistui.",
+        "fetch_error": "Statusryhmien hakeminen epäonnistui.",
+        "status_group_deleted": "Statusryhmä poistettu onnistuneesti."
+      },
+      "team_modal": {
+        "button_create": "Luo",
+        "button_update": "Päivitä",
+        "description": "Kuvaus",
+        "description_placeholder": "Anna tiimin kuvaus",
+        "equipments": "Laitteet",
+        "header_create": "Luo tiimi",
+        "header_update": "Muokkaa tiimiä",
+        "specialization": "Erikoistuminen",
+        "team_created": "Tiimi luotu onnistuneesti.",
+        "team_updated": "Tiimi päivitetty onnistuneesti.",
+        "title": "Nimi",
+        "title_placeholder": "Anna tiimin nimi",
+        "users": "Käyttäjät"
+      },
+      "teams_table": {
+        "component_title": "Tiimien hallinta",
+        "confirm_delete_message": "Oletko varma, että haluat poistaa tämän tiimin?",
+        "error_occurred": "Tapahtui virhe. Ota yhteyttä ylläpitoon.",
+        "table_column_description": "Kuvaus",
+        "table_column_equipments": "Laitteet",
+        "table_column_specialization": "Ikoni",
+        "table_column_title": "Nimi",
+        "table_column_users": "Käyttäjät",
+        "team_deleted": "Tiimi poistettu onnistuneesti."
+      },
+      "user_modal": {
+        "button_create": "Luo",
+        "button_update": "Päivitä",
+        "change_password": "Vaihda salasana",
+        "email": "Sähköposti",
+        "email_placeholder": "Syötä sähköposti",
+        "error_occurred": "Tapahtui virhe. Ota yhteyttä ylläpitoon.",
+        "first_name": "Etunimi",
+        "first_name_placeholder": "Syötä etunimi",
+        "header_create": "Luo käyttäjä",
+        "header_update": "Muokkaa käyttäjää",
+        "last_name": "Sukunimi",
+        "last_name_placeholder": "Syötä sukunimi",
+        "login": "Käyttäjänimi",
+        "login_placeholder": "Syötä käyttäjänimi",
+        "password": "Salasana",
+        "password_confirmation": "Salasanan vahvistus",
+        "password_confirmation_placeholder": "Vahvista salasana",
+        "password_placeholder": "Syötä salasana",
+        "permissions": "Oikeudet",
+        "phones": "Puhelimet",
+        "roles": "Roolit",
+        "user_created": "Käyttäjä luotu onnistuneesti.",
+        "user_updated": "Käyttäjä päivitetty onnistuneesti."
+      },
+      "users_manager": {
+        "component_title": "Käyttäjien hallinta",
+        "confirm_delete_message": "Oletko varma, että haluat poistaa tämän käyttäjän?",
+        "error_occurred": "Tapahtui virhe. Ota yhteyttä ylläpitoon.",
+        "table_column_email": "Sähköposti",
+        "table_column_login": "Kirjautuminen",
+        "table_column_name": "Nimi",
+        "table_column_permissions": "Oikeudet",
+        "table_column_phones": "Puhelimet",
+        "table_column_roles": "Roolit",
+        "user_deleted": "Käyttäjä poistettu onnistuneesti."
+      }
+    },
+    "common": {
+      "select": {
+        "element_type_select": {
+          "placeholder": "Valitse elementtityyppi"
+        },
+        "equipment_select": {
+          "placeholder": "Valitse laite"
+        },
+        "equipments": "Nostimet:",
+        "error_loading_equipments": "Laitteiden lataaminen epäonnistui",
+        "facade_direction": {
+          "direction_east": "Itä",
+          "direction_north": "Pohjoinen",
+          "direction_north_east": "Koillinen",
+          "direction_north_west": "Luode",
+          "direction_south": "Etelä",
+          "direction_south_east": "Kaakko",
+          "direction_south_west": "Lounas",
+          "direction_west": "Länsi",
+          "placeholder": "Valitse suunta"
+        },
+        "facade_group_select": {
+          "placeholder": "Valitse julkisivuryhmä"
+        },
+        "hours": "Tunnit",
+        "permission_select": {
+          "placeholder": "Valitse lupa"
+        },
+        "plus_equipment": "+ Koneet",
+        "plus_user": "+ Käyttäjä",
+        "role_select": {
+          "placeholder": "Valitse rooli"
+        },
+        "select_author": {
+          "placeholder": "Valitse tekijä"
+        },
+        "select_project_type": {
+          "placeholder": "Valitse projektityyppi"
+        },
+        "select_status": {
+          "placeholder": "Valitse status"
+        },
+        "select_team": {
+          "placeholder": "Valitse tiimi"
+        },
+        "specialization_select": {
+          "placeholder": "Valitse erikoistuminen"
+        },
+        "team_role": {
+          "assistant": "Työntekijä",
+          "intern": "Apulainen",
+          "leader": "Johtaja",
+          "placeholder": "Valitse tiimi rooli"
+        },
+        "user_select": {
+          "placeholder": "Valitse käyttäjä"
+        },
+        "user_select_project_page": {
+          "placeholder": "Valitse käyttäjät"
+        },
+        "users": "Käyttäjät:"
+      },
+      "switcher": {
+        "theme": {
+          "darkMode": "Tumma",
+          "lightMode": "Vaalea"
+        }
+      }
+    },
+    "dashboard": {
+      "projects_table": {
+        "no_projects": "Ei projekteja",
+        "no_tickets": "Ei tikettejä",
+        "table_column_created_at": "Luotu",
+        "table_column_name": "Nimi",
+        "table_column_tickets": "Tiketit",
+        "table_column_type": "Tyyppi",
+        "table_column_view": "Katso"
+      }
+    },
+    "interface": {
+      "header": {
+        "admin-panel": "Ylläpitäjän paneeli",
+        "dashboard": "Päävalikko",
+        "logout": "Kirjaudu ulos",
+        "profile": "Profiili",
+        "supervisor-panel": "Valvojan paneeli",
+        "user_is": "Käyttäjä"
+      }
+    },
+    "modal": {
+      "confirmation_modal": {
+        "button_cancel": "Peruuta",
+        "button_confirm": "Vahvista",
+        "confirm_action": "Vahvista toiminto"
+      }
+    },
+    "project": {
+      "elements": {
+        "fpsm": {
+          "Messages": {
+            "assign_summary": "Statuksia: {{createdStatusesCount}}, olemassa olevia statuksia: {{existingStatusesCount}}, uusia tikettejä: {{createdTicketsCount}}"
+          }
+        }
+      },
+      "facade_view_page": {
+        "page_mode": {
+          "editing": "Muokkaa",
+          "mode": "Tila",
+          "viewing": "Katso"
+        }
+      },
+      "facades": {
+        "facade_card": {
+          "confirm_delete_message": "Oletko varma, että haluat poistaa tämän julkisivun?",
+          "delete_error": "Julkisivun poisto epäonnistui.",
+          "facade_deleted": "Julkisivu poistettu onnistuneesti."
+        },
+        "facade_view_page": {
+          "element_inspector_actions": {
+            "actions": "Toiminnot",
+            "createGroup": "Luo uusi ryhmä valituista elementeistä",
+            "newGroup": "Uusi ryhmä"
+          },
+          "element_inspector_form": {
+            "deleteElements": "Poista elementit",
+            "id": "ID",
+            "label_bottom": "Y",
+            "label_height": "Korkeus",
+            "label_left": "X",
+            "label_width": "Leveys",
+            "loading": "Ladataan...",
+            "placeholder_bottom": "Aseta Y",
+            "placeholder_bottomDelta": "Lisää Y",
+            "placeholder_height": "Aseta korkeus",
+            "placeholder_heightDelta": "Lisää korkeus",
+            "placeholder_left": "Aseta X",
+            "placeholder_leftDelta": "Lisää X",
+            "placeholder_width": "Aseta leveys",
+            "placeholder_widthDelta": "Lisää leveys",
+            "title": "Nimi",
+            "type": "Tyyppi",
+            "updateElements": "Päivitä elementit",
+            "value_add": "Lisää",
+            "value_set": "Aseta"
+          },
+          "element_inspector_panel": {
+            "deselectAll": "Poista valinnat",
+            "elements": "elementtiä",
+            "selectAll": "Valitse kaikki",
+            "selected": "Valittu"
+          },
+          "element_orders_table": {
+            "addButton": "Lisää uusi materiaali",
+            "columns": {
+              "height": "Korkeus",
+              "m2": "m2",
+              "note": "Huomautus",
+              "price": "Hinta",
+              "side": "Puoli",
+              "SKU": "SKU",
+              "title": "Otsikko",
+              "width": "Leveys"
+            },
+            "side_select_potions": {
+              "bottom": "Bottom",
+              "entire_element": "Entire element",
+              "left": "Left",
+              "right": "Right",
+              "top": "Top"
+            },
+            "title": "Materiaalitaulukko"
+          },
+          "navigation_bar": {
+            "backward": "Edellinen Julkisivu",
+            "forward": "Seuraava Julkisivu",
+            "toHome": "Päänäyttöön"
+          },
+          "object_inspector": {
+            "tabs": {
+              "element": "Elementti",
+              "elementChanges": "Elementtien muokkaus",
+              "elementMaterials": "Elementtien materiaalit",
+              "elementTickets": "Elementtien tiketit"
+            },
+            "title": "Elementin tiedot"
+          },
+          "tree_view": {
+            "context_menu": {
+              "create_cluster": "Crete new cluster",
+              "create_group": "Create new group",
+              "create_layer": "Create new layer"
+            },
+            "group_modal": {
+              "cluster_name": "Cluster name",
+              "create_cluster": "Create cluster",
+              "create_layer": "Create layer",
+              "error_field": "please enter name",
+              "group_name": "Group name",
+              "group_title": "Crete group",
+              "layer_name": "Layer name",
+              "ok_btn": "OK",
+              "parent_cluster": "Parent cluster",
+              "parent_layer": "Parent layer"
+            }
+          }
+        },
+        "fpsmstatus_management": {
+          "save_and_close": "Tallenna ja sulje",
+          "save_and_next_day": "Tallenna ja seuraava päivä",
+          "selected_elements": "Valitut elementit"
+        },
+        "group_facades": {
+          "button_create_facade": "Luo julkisivu",
+          "confirm_delete_message": "Oletko varma, että haluat poistaa tämän julkisivuryhmän?",
+          "delete_error": "Julkisivuryhmän poisto epäonnistui.",
+          "group_facade_deleted": "Julkisivuryhmä poistettu onnistuneesti.",
+          "new_facade_group_label": "Uusi julkisivuryhmä"
+        },
+        "modals": {
+          "facade_edit_modal": {
+            "button_cancel": "Peruuta",
+            "button_save": "Tallenna",
+            "direction": "Suunta",
+            "direction_placeholder": "Syötä suunta",
+            "error_occurred": "Tapahtui virhe",
+            "facade_created": "Julkisivu luotu onnistuneesti.",
+            "facade_updated": "Julkisivu päivitetty onnistuneesti.",
+            "group_facade": "Julkisivuryhmä",
+            "header_create": "Luo julkisivu",
+            "header_update": "Muokkaa julkisivua",
+            "properties": {
+              "accordion_properties_title": "Ominaisuudet",
+              "current": "Nykyinen",
+              "current_placeholder": "Syötä nykyinen arvo",
+              "lifting_point": "Nostopiste",
+              "lifting_point_placeholder": "Syötä nostopiste",
+              "max": "Maksimi",
+              "max_placeholder": "Syötä maksimiarvo",
+              "min": "Minimi",
+              "min_placeholder": "Syötä minimiarvo"
+            },
+            "title": "Julkisivun nimi",
+            "title_placeholder": "Syötä julkisivun nimi"
+          },
+          "facade_group_edit_modal": {
+            "button_cancel": "Peruuta",
+            "button_save": "Tallenna",
+            "error_occurred": "Tapahtui virhe",
+            "group_facade_created": "Julkisivuryhmä luotu onnistuneesti.",
+            "group_facade_updated": "Julkisivuryhmä päivitetty onnistuneesti.",
+            "header_create": "Luo julkisivuryhmä",
+            "header_update": "Muokkaa julkisivuryhmää",
+            "title": "Julkisivuryhmän nimi",
+            "title_placeholder": "Syötä julkisivuryhmän nimi"
+          }
+        },
+        "page_mode": {
+          "editing": "Muokkaa",
+          "mode": "Tila",
+          "viewing": "Katso"
+        }
+      },
+      "rooms": {
+        "grid_buttons": {
+          "deselect_all": "Poista kaikki valinnat",
+          "select_all": "Valitse kaikki"
+        },
+        "main": {
+          "switch_staircase_draw_type_component": {
+            "apartments": "Asunnot",
+            "rooms": "Huoneet"
+          }
+        },
+        "modals": {
+          "edit_apartment_modal": {
+            "apartment_number": "Asuntonumero",
+            "apartment_number_placeholder": "Syötä asuntonumero",
+            "apartment_updated": "Asunto päivitetty",
+            "button_cancel": "Peruuta",
+            "button_save": "Tallenna",
+            "error_occurred": "Tapahtui virhe",
+            "header_update": "Muokkaa asuntoa",
+            "mailbox_name": "Postilaatikon nimi",
+            "mailbox_name_placeholder": "Syötä postilaatikon nimi"
+          },
+          "edit_layout_staircase_modal": {
+            "button_cancel": "Peruuta",
+            "button_save": "Tallenna",
+            "error_occurred": "Tapahtui virhe",
+            "header_update": "Muokkaa sarakkeen nimeä",
+            "layout_updated": "Sarakkeen nimi päivitetty",
+            "title": "Nimi"
+          },
+          "edit_room_modal": {
+            "button_cancel": "Peruuta",
+            "button_save": "Tallenna",
+            "error_occurred": "Tapahtui virhe",
+            "header_update": "Muokkaa huonetta",
+            "room_name": "Huoneen nimi",
+            "room_name_placeholder": "Syötä huoneen nimi",
+            "room_updated": "Huone päivitetty"
+          },
+          "edit_staircase_modal": {
+            "button_cancel": "Peruuta",
+            "button_save": "Tallenna",
+            "error_occurred": "Tapahtui virhe",
+            "header_update": "Muokkaa porrasta",
+            "staircase_updated": "Porras päivitetty",
+            "title": "Portaan nimi",
+            "title_placeholder": "Anna portaalle nimi"
+          },
+          "status_duplicate_modal": {
+            "option_create_new_tickets": "Älä poista vanhoja tikettejä, luo lisää uusia",
+            "option_delete_old_create_new": "Poista vanhat tiketit ja luo uudet tilalle",
+            "option_no_new_tickets": "Älä luo uutta tikettiä",
+            "title": "Tiketti samalle työlle tuplaantuu. Mitä tehdään?"
+          }
+        },
+        "psm": {
+          "Messages": {
+            "assign_summary": "Statuksia: {{createdStatusesCount}}, olemassa olevia statuksia: {{existingStatusesCount}}, uusia tikettejä: {{createdTicketsCount}}"
+          },
+          "no_statuses_available": "Ei statuksia saatavilla",
+          "select_statuses_placeholder": "Valitse statukset",
+          "status_assignment_controls": {
+            "by_teams": "Tehdyt tunnit teameittäin",
+            "deadline": "Määräaika",
+            "end": "Loppu",
+            "inform_client": "Informoi asiakasta tulevista töistä",
+            "mark_work": "Merkitse töitä",
+            "markall": "Merkitse kaikki",
+            "clearall": "Tyhjennä kaikki",
+            "pick_statuses": "Valitse statukset",
+            "plan_work": "Suunnittele töitä",
+            "send": "Lähetä",
+            "send_to_client": "Lähetä tehdyt työt asiakkaalle",
+            "send_to_workers": "Lähetä tulevat työt tekijöille",
+            "sending": "Lähetetään!",
+            "sent": "Lähetetty!",
+            "sent_countdown": "Lähetetty! {{count}}s",
+            "sent_countdown_one": "Lähetetty! {{count}}s",
+            "sent_countdown_other": "Lähetetty! {{count}}s",
+            "start": "Alku / Toimituspv",
+            "team": "Tiimit",
+            "user": "Käyttäjä"
+          },
+          "statuses_selected_one": "Valittu status",
+          "statuses_selected_other": "Valitut statukset"
+        },
+        "psmstatus_management": {
+          "save_and_close": "Tallenna ja sulje",
+          "save_and_next_day": "Tallenna ja seuraava päivä",
+          "selected_apartments": "Valitut asunnot"
+        },
+        "tf": {
+          "Files": {
+            "files": "Tiedostot"
+          },
+          "Form": {
+            "accordion_title_files": "Tiedostot",
+            "accordion_title_times": "Ajat",
+            "accordion_title_users": "Käyttäjät",
+            "author": "Tekijä",
+            "closed": "Suljettu",
+            "content": "Sisältö",
+            "create": "Luo",
+            "critical_problem": "Kriittinen ongelma",
+            "criticality": "Kriittisyys",
+            "deadline": "Deadline",
+            "delete": "Poista",
+            "end": "Loppu",
+            "hour_estimate": "Tuntiarvio",
+            "in_progress": "Käynnissä",
+            "message_client": "Viesti asiakkaalle",
+            "no_problem": "Ei ongelmaa",
+            "opened": "Avoinna",
+            "problem": "Ongelma",
+            "readiness": "Valmis",
+            "save": "Tallenna",
+            "start": "Toimituspv",
+            "teams": "Tiimit",
+            "title": "Otsikko",
+            "tja": "TJA",
+            "tooltip_text": "TT = Asiaan käytetyt tunnit.\nATA = Tiketinantajan tunnit.\nTJA = Työnjohdon tuntiarvio.\nTTA = Työntekijän tuntiarvio",
+            "tt": "TT",
+            "tta": "TTA",
+            "user_ids": "Käyttäjät",
+            "week_estimate": "Viikolla "
+          },
+          "Messages": {
+            "create_failure": "Luonti epäonnistui",
+            "create_success": "Luonti onnistui",
+            "delete_failure": "Poisto epäonnistui",
+            "delete_success": "Poisto onnistui",
+            "update_failure": "Päivitys epäonnistui",
+            "update_success": "Päivitys onnistui"
+          }
+        }
+      },
+      "work_statuses": {
+        "status": {
+          "description": "Statuksen kuvaus",
+          "previous_statuses": "Aiemmat statukset"
+        }
+      }
+    },
+    "supervisor": {
+      "project_modal": {
+        "button_create": "Luo",
+        "button_update": "Päivitä",
+        "description": "Projektin kuvaus",
+        "description_placeholder": "Syötä projektin kuvaus",
+        "header_create": "Luo projekti",
+        "header_update": "Muokkaa projektia",
+        "title": "Projektin nimi",
+        "title_placeholder": "Syötä projektin nimi",
+        "type": "Projektin tyyppi",
+        "type_placeholder": "Valitse projektin tyyppi",
+        "users_roles": "Lisätyt käyttäjät"
+      },
+      "projects_manager": {
+        "component_title": "Projektien hallinta",
+        "confirm_delete_hard_message": "Oletko varma, että haluat poistaa tämän projektin ja siihen liittyvät tiedot tietokannasta?",
+        "confirm_delete_message": "Oletko varma, että haluat poistaa tämän projektin?",
+        "confirm_restore_message": "Oletko varma, että haluat palauttaa tämän projektin tietokannasta?",
+        "project_deleted": "Projekti poistettu onnistuneesti.",
+        "project_deleted_hard": "Projekti poistettu tietokannasta.",
+        "project_restored": "Projekti palautettu tietokannasta onnistuneesti.",
+        "project_status_active": "Aktiivinen",
+        "project_status_deleted": "Poistettu",
+        "table_column_deleted": "Tila",
+        "table_column_title": "Nimi",
+        "table_column_type": "Tyyppi"
+      }
+    }
+  },
+  "pages": {
+    "admin_page": {
+      "permissions": "Oikeudet",
+      "roles": "Roolit",
+      "specializations": "Erikoistumiset",
+      "tab_users": "Käyttäjät"
+    },
+    "dashboard_page": {
+      "title": "Projektit"
+    },
+    "login_page": {
+      "button": "Kirjaudu",
+      "password": "Salasana",
+      "password_placeholder": "Syötä salasana",
+      "username": "Käyttäjänimi",
+      "username_placeholder": "Syötä käyttäjänimi"
+    },
+    "not_found_page": {
+      "button": "Palaa etusivulle",
+      "title": "Virhe 404. Sivua ei löytynyt"
+    },
+    "project_page": {
+      "error_loading_project": "Virhe ladattaessa projektia",
+      "loading": "Ladataan...",
+      "project": "Projekti",
+      "project_not_found": "Projekteja ei löytynyt"
+    },
+    "supervisor_page": {
+      "tab_equipments": "Nostimet",
+      "tab_projects": "Projektit",
+      "tab_teams": "Tiimit"
+    }
+  }
+}

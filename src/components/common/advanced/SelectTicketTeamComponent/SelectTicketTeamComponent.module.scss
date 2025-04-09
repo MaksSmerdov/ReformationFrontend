@@ -1,0 +1,114 @@
+.team-dropdown {
+  position: relative;
+  width: 100%;
+}
+
+.team-selector {
+  cursor: pointer;
+  min-height: 37px;
+  padding: 5px;
+  border: 1px solid transparent !important;
+  border-radius: 4px;
+  display: flex !important;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.team-badge {
+  display: flex !important;
+  align-items: center;
+  padding: 5px;
+  gap: 10px;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+
+  Button {
+    padding: 0;
+  }
+  Button svg {
+    color: #6c757d;
+    transition: color 0.3s ease-in-out;
+    &:hover {
+      color: #dc3545;
+    }
+  }
+}
+
+.team-title {
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 400;
+  color: black;
+}
+
+.remove-btn {
+  padding: 0;
+  margin-left: auto;
+}
+
+.remove-icon {
+  width: 14px;
+  height: 14px;
+}
+
+.team-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  background-color: #fff;
+  z-index: 1000;
+  max-height: 170px;
+  overflow-y: auto;
+}
+
+.team-item {
+  padding: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s ease-in-out;
+
+  &:hover {
+    background-color: #f8f9fa;
+  }
+}
+
+.team-item--selected {
+  background-color: #e9ecef;
+}
+
+.team-header {
+  background-color: transparent !important;
+}
+
+.checkmark {
+  margin-left: auto;
+}
+
+.placeholder {
+  color: #adb5bd;
+}
+
+.clear-all {
+  margin-left: auto;
+}
+
+.team-input {
+  min-height: 37px;
+}
+
+.placeholder {
+  color: #6c757d;
+}
+
+.team-content {
+  max-height: 300px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  overflow: auto;
+}

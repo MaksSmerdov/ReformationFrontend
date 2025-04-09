@@ -1,0 +1,266 @@
+{
+  "components": {
+    "admin": {
+      "permission_modal": {
+        "button_create": "Создать",
+        "header_create": "Создать разрешение",
+        "permission_create_failed": "Не удалось создать разрешение",
+        "permission_created": "Разрешение успешно создано"
+      },
+      "permissions_table": {
+        "button_cancel": "Отмена",
+        "button_confirm": "Подтвердить",
+        "button_create": "Создать разрешение",
+        "button_delete": "Удалить",
+        "button_edit": "Редактировать",
+        "confirm_delete_message": "Вы уверены, что хотите удалить это разрешение?",
+        "confirm_delete_title": "Подтверждение удаления",
+        "permission_delete_failed": "Не удалось удалить разрешение",
+        "permission_deleted": "Разрешение успешно удалено",
+        "table_column_actions": "Действия",
+        "table_column_id": "ID"
+      },
+      "project_type_modal": {
+        "button_create": "Создать",
+        "button_update": "Обновить",
+        "header_create": "Создать тип проекта",
+        "header_update": "Редактировать тип проекта",
+        "project_type_created": "Тип проекта успешно создан",
+        "project_type_updated": "Тип проекта успешно обновлен",
+        "title": "Название",
+        "title_placeholder": "Введите название типа проекта"
+      },
+      "project_types_manager": {
+        "button_cancel": "Отмена",
+        "button_confirm": "Подтвердить",
+        "button_create": "Создать тип проекта",
+        "button_delete": "Удалить",
+        "button_edit": "Редактировать",
+        "component_title": "Управление типами проектов",
+        "confirm_delete_message": "Вы уверены, что хотите удалить этот тип проекта?",
+        "confirm_delete_title": "Подтверждение удаления",
+        "project_type_deleted": "Тип проекта успешно удален",
+        "table_column_actions": "Действия",
+        "table_column_id": "ID",
+        "table_column_title": "Название"
+      },
+      "role_modal": {
+        "no_role_selected": "Роль не выбрана"
+      },
+      "roles_table": {
+        "button_cancel": "Отмена",
+        "button_confirm": "Подтвердить",
+        "button_create": "Создать роль",
+        "button_delete": "Удалить",
+        "button_edit": "Редактировать",
+        "confirm_delete_title": "Подтверждение удаления",
+        "table_column_actions": "Действия",
+        "table_column_id": "ID"
+      },
+      "specializations_manager": {
+        "button_create": "Создать специализацию",
+        "button_delete": "Удалить",
+        "button_edit": "Редактировать",
+        "table_column_actions": "Действия",
+        "table_column_id": "ID"
+      },
+      "user_modal": {
+        "button_add": "Добавить",
+        "button_remove": "Удалить",
+        "phone_placeholder": "Введите телефон"
+      },
+      "users_manager": {
+        "button_cancel": "Отмена",
+        "button_confirm": "Подтвердить",
+        "button_create": "Создать пользователя",
+        "button_delete": "Удалить",
+        "button_edit": "Редактировать",
+        "confirm_delete_title": "Подтверждение удаления",
+        "table_column_actions": "Действия",
+        "table_column_id": "ID"
+      }
+    },
+    "common": {
+      "switcher": {
+        "theme": {
+          "dark": "Темная",
+          "light": "Светлая"
+        }
+      }
+    },
+    "dashboard": {
+      "projects_table": {
+        "project_type_1": "Фасады",
+        "project_type_2": "Комнаты"
+      }
+    },
+    "project": {
+      "facade_view_page": {
+        "element_orders_table": {
+          "addButton": "Добавить новый материал",
+          "columns": {
+            "height": "Высота",
+            "m2": "м2",
+            "note": "Заметка",
+            "price": "Цена",
+            "side": "Сторона",
+            "SKU": "SKU",
+            "title": "Название",
+            "width": "Ширина"
+          },
+          "side_select_potions": {
+            "bottom": "Низ",
+            "entire_element": "Весь элемент",
+            "left": "Слева",
+            "right": "Справа",
+            "top": "Верх"
+          },
+          "title": "Таблица материалов"
+        },
+        "navigation_bar": {
+          "backward": "Назад",
+          "forward": "Вперед",
+          "toHome": "Домашняя страница"
+        }
+      },
+      "facades": {
+        "facade_view_page": {
+          "element_inspector_form": {
+            "x": "X",
+            "y": "Y"
+          },
+          "element_tickets_inspector_panel": {
+            "deselectAll": "element_tickets_inspector_panel.deselectAll",
+            "elements": "element_tickets_inspector_panel.elements",
+            "selectAll": "element_tickets_inspector_panel.selectAll",
+            "selected": "element_tickets_inspector_panel.selected"
+          },
+          "grouping_modal": {
+            "name_input": "Имя группы",
+            "ok_btn": "ОК",
+            "title": "Создание новой группы"
+          },
+          "object_inspector": {
+            "tabs": {
+              "group": "Группа элементов",
+              "guide": "Направляющие"
+            }
+          },
+          "tree_context_menu": {
+            "grouping_item": "Группировать"
+          }
+        }
+      },
+      "rooms": {
+        "forms": {
+          "apartment": {
+            "apartment_not_found": "Квартира не найдена",
+            "apartment_number": "Номер квартиры",
+            "button_save": "Сохранить",
+            "error": "Ошибка",
+            "header": "Данные квартиры",
+            "loading": "Загрузка...",
+            "mailbox_name": "Название почтового ящика"
+          },
+          "room": {
+            "button_save": "Сохранить",
+            "error": "Ошибка",
+            "header": "Данные комнаты",
+            "loading": "Загрузка...",
+            "room_name": "Название комнаты",
+            "room_not_found": "Комната не найдена"
+          }
+        },
+        "psm": {
+          "Messages": {
+            "create_status_failure": "Не удалось создать статус",
+            "create_status_success": "Статус успешно создан",
+            "create_ticket_failure": "Не удалось создать тикет",
+            "create_ticket_success": "Тикет успешно создан",
+            "delete_status_failure": "Не удалось удалить статус",
+            "delete_status_success": "Статус успешно удален",
+            "delete_ticket_failure": "Не удалось удалить тикет",
+            "delete_ticket_success": "Тикет успешно удален",
+            "update_status_failure": "Не удалось обновить статус",
+            "update_status_success": "Статус успешно обновлен",
+            "update_ticket_failure": "Не удалось обновить тикет",
+            "update_ticket_success": "Тикет успешно обновлен"
+          },
+          "status_assignment_controls": {
+            "by_apartments": "По квартирам",
+            "by_team_workers": "По командам и работникам",
+            "create_ticket": "Создать тикет",
+            "hours": "ч"
+          },
+          "status_management": {
+            "save_and_close": "Сохранить и закрыть",
+            "save_and_next_day": "Сохранить и на следующий день"
+          },
+          "statuses_selected": "статусов выбрано"
+        },
+        "psmstatus_management": {
+          "selected_rooms": "Выбранные комнаты"
+        },
+        "rooms_project_component": {
+          "error_occurred": "Произошла ошибка",
+          "staircase_updated": "Подъезд успешно обновлен"
+        },
+        "sds": {
+          "StaircaseSelectAllCell": {
+            "deselect_all": "Отменить все",
+            "select_all": "Выбрать все"
+          }
+        },
+        "tf": {
+          "Error": {
+            "failed": "Ошибка: ",
+            "loading": "Загрузка..."
+          },
+          "Files": {
+            "add_files": "Добавить файлы",
+            "remove": "Удалить"
+          },
+          "Form": {
+            "additional_parameters": "Дополнительные параметры",
+            "ata": "ATA",
+            "markall": "Отметить все",
+            "plus_equipment": "+Кран",
+            "seller_promise": "Обещание продавца",
+            "team": "Команда"
+          }
+        }
+      }
+    },
+    "supervisor": {
+      "project_modal": {
+        "button_delete": "Удалить",
+        "button_remove": "Удалить",
+        "project_created": "Проект успешно создан",
+        "project_type_1": "Фасады",
+        "project_type_2": "Комнаты",
+        "project_updated": "Проект успешно обновлен",
+        "remove": "Удалить",
+        "user_delete": "Удалить",
+        "user_remove": "Удалить"
+      },
+      "projects_manager": {
+        "button_create": "Создать проект",
+        "button_delete": "Poista",
+        "button_delete_hard": "Удалить полностью",
+        "button_edit": "Редактировать",
+        "button_restore": "Восстановить",
+        "project_type_1": "Фасады",
+        "project_type_2": "Комнаты",
+        "table_column_actions": "Действия",
+        "table_column_id": "ID"
+      }
+    }
+  },
+  "pages": {
+    "admin_page": {
+      "project_types": "Типы проектов",
+      "statuses": "Статусы",
+      "users": "Пользователи"
+    }
+  }
+}

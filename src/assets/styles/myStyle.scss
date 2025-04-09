@@ -1,0 +1,163 @@
+@use "sass:map";
+
+$spacing-values: 1px, 2px, 3px, 4px;
+
+@each $value in $spacing-values {
+	.m-#{$value} {
+		margin: $value !important;
+	}
+	.ms-#{$value} {
+		margin-left: $value !important;
+	}
+	.me-#{$value} {
+		margin-right: $value !important;
+	}
+	.mt-#{$value} {
+		margin-top: $value !important;
+	}
+	.mb-#{$value} {
+		margin-bottom: $value !important;
+	}
+	.mx-#{$value} {
+		margin-left: $value !important;
+		margin-right: $value !important;
+	}
+	.my-#{$value} {
+		margin-top: $value !important;
+		margin-bottom: $value !important;
+	}
+	.p-#{$value} {
+		padding: $value;
+	}
+	.ps-#{$value} {
+		padding-left: $value;
+	}
+	.pe-#{$value} {
+		padding-right: $value;
+	}
+	.pt-#{$value} {
+		padding-top: $value;
+	}
+	.pb-#{$value} {
+		padding-bottom: $value;
+	}
+	.px-#{$value} {
+		padding-left: $value;
+		padding-right: $value;
+	}
+	.py-#{$value} {
+		padding-top: $value;
+		padding-bottom: $value;
+	}
+	.gap-#{$value} {
+		gap: $value;
+	}
+}
+
+$negative-spacing-values: -1px, -2px, -3px;
+
+@each $value in $negative-spacing-values {
+	.m-#{$value} {
+		margin: $value !important;
+	}
+	.ms-#{$value} {
+		margin-left: $value !important;
+	}
+	.me-#{$value} {
+		margin-right: $value !important;
+	}
+	.mt-#{$value} {
+		margin-top: $value !important;
+	}
+	.mb-#{$value} {
+		margin-bottom: $value !important;
+	}
+	.mx-#{$value} {
+		margin-left: $value !important;
+		margin-right: $value !important;
+	}
+	.my-#{$value} {
+		margin-top: $value !important;
+		margin-bottom: $value !important;
+	}
+}
+
+// $negative-simple-values: -1, -2, -3;
+
+// @each $value in $negative-simple-values {
+// 	 .z-#{$value} {
+// 		  z-index: $value !important;
+// 	 }
+// }
+
+@for $value from 40 through 60 {
+	.z-index-#{$value} {
+		z-index: $value !important;
+	}
+}
+
+@for $value from 0 through 10 {
+	.opacity-#{$value} {
+		opacity: $value !important;
+	}
+}
+
+$size-values: 1px;
+
+@each $value in $size-values {
+	.w-#{$value} {
+		width: $value;
+	}
+	.h-#{$value} {
+		height: $value;
+	}
+	.min-w-#{$value} {
+		min-width: $value;
+	}
+	.min-h-#{$value} {
+		min-height: $value;
+	}
+	.max-w-#{$value} {
+		max-width: $value;
+	}
+	.max-h-#{$value} {
+		max-height: $value;
+	}
+}
+
+$resize-button-sizes: (
+	resize-button: 24px,
+	resize-button-sm: 18px
+);
+
+@mixin resize-button($size) {
+	.w-#{$size} {
+		width: map.get($resize-button-sizes, $size);
+	}
+
+	.h-#{$size} {
+		height: map.get($resize-button-sizes, $size);
+	}
+
+	.w-min-#{$size} {
+		min-width: map.get($resize-button-sizes, $size);
+	}
+
+	.h-min-#{$size} {
+		min-height: map.get($resize-button-sizes, $size);
+	}
+
+	.wh-#{$size} {
+		width: map.get($resize-button-sizes, $size);
+		height: map.get($resize-button-sizes, $size);
+	}
+
+	.wh-min-#{$size} {
+		min-width: map.get($resize-button-sizes, $size);
+		min-height: map.get($resize-button-sizes, $size);
+	}
+}
+
+@each $size in map.keys($resize-button-sizes) {
+	@include resize-button($size);
+}

@@ -1,0 +1,56 @@
+@use "sass:color";
+
+$spacer: 0.5rem;
+$font-size-base: 0.875rem;
+$btn-padding-x: 0.25rem;
+$btn-padding-y: 0.25rem;
+
+@use "bootstrap" with (
+    $spacer: $spacer,
+    $font-size-base: $font-size-base,
+    $btn-padding-x: $btn-padding-x,
+    $btn-padding-y: $btn-padding-y,
+    $form-label-margin-bottom: 0
+);
+
+.btn-cell-select-off {
+    color: black;
+    background-color: #eb1010;
+    border-color: #eb1010;
+
+    &:hover {
+        background-color: color.adjust(#eb1010, $lightness: -10%);
+        border-color: color.adjust(#eb1010, $lightness: -10%);
+    }
+}
+
+.btn-cell-select-on {
+    color: white;
+    background-color: #4dc739;
+    border-color: #4dc739;
+
+    &:hover {
+        background-color: color.adjust(#4dc739, $lightness: -10%);
+        border-color: color.adjust(#4dc739, $lightness: -10%);
+    }
+}
+
+.btn-outline-cell-select-off {
+    color: #eb1010;
+    border-color: #eb1010;
+
+    &:hover {
+        color: color.adjust(#eb1010, $lightness: -10%);
+        border-color: color.adjust(#eb1010, $lightness: -10%);
+    }
+}
+
+.btn-outline-cell-select-on {
+    color: #4dc739 !important;
+    border-color: #4dc739 !important;
+
+    &:hover {
+        color: color.adjust(#4dc739, $lightness: -10%) !important;
+        border-color: color.adjust(#4dc739, $lightness: -10%) !important;
+    }
+}

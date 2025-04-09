@@ -1,0 +1,26 @@
+Обозначения префиксов компонентов:
+
+PSM - project status manager
+ACS - apartment cell system
+ACS_T - apartment cell system & tickets
+RCS - room cell system
+RCS_T - room cell system & tickets
+TF - ticket form
+
+Статусы тикетов:
+
+Keskeneräinen - Незаконченный
+Suunnittelu - Дизайн
+Tavaran tilaus - Заказ товара
+Tavaran toimitus - Доставка товара
+Mesta valmis - Места готова
+Tehtävissä - На дежурстве
+Työt käynnissä - Работа в процессе
+Osatoimitettu - Частично доставлено
+Toimitettu - Доставленный
+Työnjohto tarkastanut - Проверено руководителем
+Hyväksyttävä työnjohto - Приемлемый надзор
+Tarkastettu työnjohto - Проверенное управление работой
+Hyväksytty asiakas - Одобренный клиент
+Reklamaatiot - Жалобы
+Reklamaatio korjattu - Жалоба исправлена

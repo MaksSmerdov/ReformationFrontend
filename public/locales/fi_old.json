@@ -1,0 +1,241 @@
+{
+  "components": {
+    "admin": {
+      "permission_modal": {
+        "button_create": "Luo",
+        "header_create": "Luo lupa",
+        "permission_create_failed": "Luvan luominen epäonnistui.",
+        "permission_created": "Lupa luotu onnistuneesti."
+      },
+      "permissions_table": {
+        "button_cancel": "Peruuta",
+        "button_confirm": "Vahvista",
+        "button_create": "Luo pääsy",
+        "button_delete": "Poista",
+        "button_edit": "Muokkaa",
+        "confirm_delete_message": "Oletko varma, että haluat poistaa tämän pääsyn?",
+        "confirm_delete_title": "Poiston vahvistus",
+        "permission_delete_failed": "Pääsyn poisto epäonnistui.",
+        "permission_deleted": "Pääsy poistettu onnistuneesti.",
+        "table_column_actions": "Toiminnot",
+        "table_column_id": "ID"
+      },
+      "project_type_modal": {
+        "button_create": "Luo",
+        "button_update": "Päivitä",
+        "header_create": "Luo projektityyppi",
+        "header_update": "Muokkaa projektityyppiä",
+        "project_type_created": "Projektityyppi luotu onnistuneesti.",
+        "project_type_updated": "Projektityyppi päivitetty onnistuneesti.",
+        "title": "Nimi",
+        "title_placeholder": "Anna projektityypin nimi"
+      },
+      "project_types_manager": {
+        "button_cancel": "Peruuta",
+        "button_confirm": "Vahvista",
+        "button_create": "Luo projektin tyyppi",
+        "button_delete": "Poista",
+        "button_edit": "Muokkaa",
+        "component_title": "Projektityyppien hallinta",
+        "confirm_delete_message": "Oletko varma, että haluat poistaa tämän projektityypin?",
+        "confirm_delete_title": "Vahvista poisto",
+        "project_type_1": "Julkisivut",
+        "project_type_2": "Sisäeditori",
+        "project_type_deleted": "Projektityyppi poistettu.",
+        "table_column_actions": "Toiminnot",
+        "table_column_id": "ID",
+        "table_column_title": "Nimi"
+      },
+      "role_modal": {
+        "no_role_selected": "Ei roolia valittuna."
+      },
+      "roles_table": {
+        "button_cancel": "Peruuta",
+        "button_confirm": "Vahvista",
+        "button_create": "Luo rooli",
+        "button_delete": "Poista",
+        "button_edit": "Muokkaa",
+        "confirm_delete_title": "Poiston vahvistus",
+        "table_column_actions": "Toiminnot",
+        "table_column_id": "ID"
+      },
+      "specializations_manager": {
+        "button_create": "Luo erikoistuminen",
+        "button_delete": "Poista",
+        "button_edit": "Muokkaa",
+        "table_column_actions": "Toiminnot",
+        "table_column_id": "ID"
+      },
+      "user_modal": {
+        "button_add": "Lisää",
+        "button_remove": "Poista",
+        "phone_placeholder": "Syötä puhelin"
+      },
+      "users_manager": {
+        "button_cancel": "Peruuta",
+        "button_confirm": "Vahvista",
+        "button_create": "Luo käyttäjä",
+        "button_delete": "Poista",
+        "button_edit": "Muokkaa",
+        "confirm_delete_title": "Vahvista poisto",
+        "table_column_actions": "Toiminnot",
+        "table_column_id": "ID"
+      }
+    },
+    "common": {
+      "switcher": {
+        "theme": {
+          "dark": "Tumma",
+          "light": "Vaalea"
+        }
+      }
+    },
+    "dashboard": {
+      "projects_table": {
+        "project_type_1": "Julkisivut",
+        "project_type_2": "Sisäeditori"
+      }
+    },
+    "project": {
+      "facades": {
+        "facade_view_page": {
+          "element_inspector_form": {
+            "x": "X",
+            "y": "Y"
+          },
+          "element_tickets_inspector_panel": {
+            "deselectAll": "element_tickets_inspector_panel.deselectAll",
+            "elements": "element_tickets_inspector_panel.elements",
+            "selectAll": "element_tickets_inspector_panel.selectAll",
+            "selected": "element_tickets_inspector_panel.selected"
+          },
+          "grouping_modal": {
+            "name_input": "Ryhmän nimi",
+            "ok_btn": "OK",
+            "title": "Luo uusi ryhmä"
+          },
+          "object_inspector": {
+            "tabs": {
+              "group": "Ryhmä",
+              "guide": "Opas"
+            }
+          },
+          "tree_context_menu": {
+            "grouping_item": "Grouping"
+          }
+        }
+      },
+      "rooms": {
+        "forms": {
+          "apartment": {
+            "apartment_not_found": "Asuntoa ei löytynyt",
+            "apartment_number": "Asuntonumero",
+            "button_save": "Tallenna",
+            "error": "Virhe",
+            "header": "Asunnon tiedot",
+            "loading": "Ladataan...",
+            "mailbox_name": "Postilaatikko"
+          },
+          "room": {
+            "button_save": "Tallenna",
+            "error": "Virhe",
+            "header": "Huoneen tiedot",
+            "loading": "Ladataan...",
+            "room_name": "Huoneen nimi",
+            "room_not_found": "Huonetta ei löytynyt"
+          }
+        },
+        "psm": {
+          "Messages": {
+            "create_status_failure": "Statuksen luonti epäonnistui",
+            "create_status_success": "Status luotu",
+            "create_ticket_failure": "Tiketin luonti epäonnistui",
+            "create_ticket_success": "Tiketti luotu",
+            "delete_status_failure": "Statuksen poisto epäonnistui",
+            "delete_status_success": "Status poistettu",
+            "delete_ticket_failure": "Tiketin poisto epäonnistui",
+            "delete_ticket_success": "Tiketti poistettu",
+            "update_status_failure": "Statuksen päivitys epäonnistui",
+            "update_status_success": "Status päivitetty",
+            "update_ticket_failure": "Tiketin päivitys epäonnistui",
+            "update_ticket_success": "Tiketti päivitetty"
+          },
+          "status_assignment_controls": {
+            "by_apartments": "Raportti asunnottain",
+            "by_team_workers": "Raportti tiimeittäin & tekijöittäin",
+            "create_ticket": "Luo tiketti",
+            "hours": "h",
+            "plus_equipment": "+Koneet"
+          },
+          "status_management": {
+            "save_and_close": "Tallenna ja sulje",
+            "save_and_next_day": "Tallenna ja seuraavaan päivään"
+          },
+          "statuses_selected": "statusta valittu"
+        },
+        "psmstatus_management": {
+          "selected_rooms": "Valitut huoneet"
+        },
+        "rooms_project_component": {
+          "error_occurred": "Tapahtui virhe. Ota yhteyttä ylläpitoon.",
+          "staircase_updated": "Porras päivitetty."
+        },
+        "sds": {
+          "StaircaseSelectAllCell": {
+            "deselect_all": "Poista Kaikki",
+            "select_all": "Merkitse Kaikki"
+          }
+        },
+        "tf": {
+          "Error": {
+            "failed": "Virhe: ",
+            "loading": "Ladataan..."
+          },
+          "Files": {
+            "add_files": "Lisää tiedostoja",
+            "remove": "Poista"
+          },
+          "Form": {
+            "additional_parameters": "Lisää",
+            "ata": "ATA",
+            "markall": "Merkitse kaikki",
+            "plus_equipment": "+Koneet",
+            "seller_promise": "Tehdään",
+            "team": "Tiimi"
+          }
+        }
+      }
+    },
+    "supervisor": {
+      "project_modal": {
+        "button_delete": "Poista",
+        "button_remove": "Poista",
+        "project_created": "Projekti luotu onnistuneesti.",
+        "project_type_1": "Julkisivut",
+        "project_type_2": "Sisäeditori",
+        "project_updated": "Projekti päivitetty onnistuneesti.",
+        "remove": "Poista",
+        "user_delete": "Poista",
+        "user_remove": "Poista"
+      },
+      "projects_manager": {
+        "button_create": "Luo projekti",
+        "button_delete": "Poista",
+        "button_delete_hard": "Poista tietokannasta",
+        "button_edit": "Muokkaa",
+        "button_restore": "Palauta",
+        "project_type_1": "Julkisivut",
+        "project_type_2": "Sisäeditori",
+        "table_column_actions": "Toiminnot",
+        "table_column_id": "ID"
+      }
+    }
+  },
+  "pages": {
+    "admin_page": {
+      "project_types": "Projektityypit",
+      "statuses": "Statukset",
+      "users": "Käyttäjät"
+    }
+  }
+}

@@ -1,0 +1,74 @@
+.btn-reset {
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0;
+  border-width: initial;
+  border-style: none;
+  border-color: initial;
+  border-image: initial;
+}
+
+.apartment-view {
+  padding: 10px 20px;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__container {
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  &__section {
+    flex: 1;
+    padding: 15px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #333;
+  }
+
+  &__inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    &-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px
+    }
+
+    &-btn {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+
+  &__balcony {
+    padding-bottom: 10px;
+    display: flex;
+    gap: 5px;
+    border-bottom: 1px solid #ddd;
+
+  }
+
+  &__actions {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+  }
+
+}

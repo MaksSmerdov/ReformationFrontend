@@ -1,0 +1,41 @@
+Regex запросы для VS Code:
+Поиска новых значений в файлах переводов:
+.*[a-zA-Z]\.[a-zA-Z].*
+
+Поиск незакомментированных отладок JS
+(?<!\/\/\s)console\.log
+
+Избавление от "currentProject" слайса
+\.currentProject\.(project|statusGroups|statuses|users)
+
+Поиск контроллеров php
+<?
+*Controller.php
+
+Поиск slice "контроллеров" js
+export default
+*Slice.js
+
+reformation.frontend/*
+*.jsx, *.js, *.json
+
+reformation.editori.dev/*
+*.php
+*Resource.php
+*Request.php
+
+/var/www/demo_gromi_f_usr/data/www/editori.gromi.fi
+
+{{server_location}}
+
+(index)
+(store)
+(show)
+(update)
+(destroy)
+(restore)
+(forceDelete)
+
+Accept
+application/json
+

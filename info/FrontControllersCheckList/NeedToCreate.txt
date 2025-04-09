@@ -1,0 +1,30 @@
+Admin\Statuses\StatusLogicController
+ERP\Company\CompanyController
+ERP\Nomenclature\NomenclatureController
+ERP\NomenclatureStock\NomenclatureStockController
+ERP\Order\OrderController
+ERP\Supplier\SupplierController
+ERP\Warehouse\WarehouseController
+FacadeEditor\ElementTemplateController
+FacadeEditor\WallController
+Projects\Apartment\ApartmentContactController
+Projects\Apartment\ApartmentFileController
+Projects\ProjectProperty\ProjectPropertyController
+Projects\Ticket\TicketController
+
+
+Status History:
+FacadeEditor\ElementStatusHistoryController
+Projects\Apartment\ApartmentStatusHistoryController
+Projects\Room\RoomStatusHistoryController
+
+
+Deep inside programm:
+Admin\Statuses\StatusTypeController
+
+
+Reports and Exports:
+FacadeEditor\Exports\ElementExportController
+Admin\Ticket\ExportProjectTicketController
+Projects\Report\CompletedWorksReportController
+Projects\Report\ScheduledWorksReportController

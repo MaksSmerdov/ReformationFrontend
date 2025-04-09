@@ -1,0 +1,85 @@
+server {
+	server_name editori.gromi.fi www.editori.gromi.fi;
+
+	listen 77.91.103.68:443 ssl http2;
+
+	ssl_certificate "/var/www/httpd-cert/editori.gromi.fi_2025-02-07-15-39_01.crt";
+	ssl_certificate_key "/var/www/httpd-cert/editori.gromi.fi_2025-02-07-15-39_01.key";
+	charset utf-8;
+
+	gzip on;
+	gzip_proxied expired no-cache no-store private auth;
+	gzip_types text/css text/xml application/javascript text/plain application/json image/svg+xml image/x-icon;
+	gzip_comp_level 1;
+
+	set $root_path /var/www/demo_gromi_f_usr/data/www/editori.gromi.fi;
+	root $root_path;
+	disable_symlinks if_not_owner from=$root_path;
+
+	location / {
+		index index.html;
+		try_files $uri $uri/ /index.html?$args;
+	}
+
+	location ^~ /api/ {
+		resolver 8.8.8.8 ipv6=off;
+		proxy_pass https://teditori2.gromi.fi/api/;
+		proxy_set_header Host teditori2.gromi.fi;
+		proxy_set_header X-Real-IP $remote_addr;
+		proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+		proxy_set_header X-Forwarded-Proto $scheme;
+
+		# Настройки SSL
+		proxy_ssl_server_name on;
+		proxy_ssl_name teditori2.gromi.fi;
+		proxy_ssl_protocols TLSv1.2 TLSv1.3;
+		proxy_ssl_ciphers HIGH:!aNULL:!MD5;
+	}
+
+	location /storage/ {
+		resolver 8.8.8.8 ipv6=off;
+		proxy_pass https://teditori2.gromi.fi/storage/;
+		proxy_set_header Host teditori2.gromi.fi;
+		proxy_set_header X-Real-IP $remote_addr;
+		proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+		proxy_set_header X-Forwarded-Proto $scheme;
+
+		proxy_ssl_server_name on;
+		proxy_ssl_name teditori2.gromi.fi;
+		proxy_ssl_protocols TLSv1.2 TLSv1.3;
+		proxy_ssl_ciphers HIGH:!aNULL:!MD5;
+	}
+
+	location ~ \.php$ {
+		include /etc/nginx/fastcgi_params;
+		fastcgi_pass unix:/var/run/editori.gromi.fi.sock;
+		fastcgi_param SCRIPT_FILENAME $realpath_root$fastcgi_script_name;
+		fastcgi_param DOCUMENT_ROOT $realpath_root;
+	}
+	
+	location ~* ^.+\.(jpg|jpeg|gif|png|svg|js|css|mp3|ogg|mpeg|avi|zip|gz|bz2|rar|swf|ico|7z|doc|docx|map|ogg|otf|pdf|tff|tif|txt|wav|webp|woff|woff2|xls|xlsx|xml)$ {
+		try_files $uri $uri/ /index.html?$args;
+	}
+
+	location @fallback {
+		fastcgi_pass unix:/var/run/editori.gromi.fi.sock;
+		fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+		include /etc/nginx/fastcgi_params;
+	}
+
+	include "/etc/nginx/fastpanel2-sites/demo_gromi_f_usr/editori.gromi.fi.includes";
+	include /etc/nginx/fastpanel2-includes/*.conf;
+
+	error_log /var/www/demo_gromi_f_usr/data/logs/editori.gromi.fi-frontend.error.log;
+	access_log /var/www/demo_gromi_f_usr/data/logs/editori.gromi.fi-frontend.access.log;
+}
+
+server {
+	server_name editori.gromi.fi www.editori.gromi.fi;
+	listen 77.91.103.68:80;
+	
+	return 301 https://$host$request_uri;
+
+	error_log /var/www/demo_gromi_f_usr/data/logs/editori.gromi.fi-frontend.error.log;
+	access_log /var/www/demo_gromi_f_usr/data/logs/editori.gromi.fi-frontend.access.log;
+}

@@ -1,0 +1,135 @@
+html,
+body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+}
+
+#root {
+	width: 100%;
+	height: auto;
+	min-height: 100vh;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	display: block;
+}
+
+.table {
+
+	th,
+	td {
+		padding: 1px 2px;
+		height: 1px;
+		vertical-align: middle;
+	}
+}
+
+.dropdown>.dropdown-toggle {
+	padding: 0 !important;
+}
+
+.bi::before {
+	vertical-align: 0 !important;
+}
+
+.square-element {
+	aspect-ratio: 1 / 1;
+}
+
+.show-on-hover {
+	opacity: 0;
+	transition: opacity 0.3s;
+}
+
+.show-on-hover-1 {
+	opacity: 0.2;
+	transition: opacity 0.3s;
+}
+
+.show-on-hover:hover,
+.show-on-hover-1:hover {
+	opacity: 1;
+}
+
+.text-shadow-white {
+	text-shadow: 2px 1px 0 white, -2px -1px 0 white, -1px 2px 0 white, 1px -2px 0 white, 2px -1px 0 white, -2px 1px 0 white, -1px -2px 0 white, 1px 2px 0 white;
+}
+
+.text-shadow-black {
+	text-shadow: 2px 1px 0 black, -2px -1px 0 black, -1px 2px 0 black, 1px -2px 0 black, 2px -1px 0 black, -2px 1px 0 black, -1px -2px 0 black, 1px 2px 0 black;
+}
+
+.outline-black {
+	outline: 1px solid black;
+}
+
+.no-spinner::-webkit-outer-spin-button,
+.no-spinner::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+.no-spinner {
+	appearance: textfield;
+	-moz-appearance: textfield;
+}
+
+.cursor-pointer {
+	cursor: pointer;
+}
+
+.border-transparent {
+	border-color: transparent !important;
+}
+
+.min-h-auto {
+	min-height: auto !important;
+}
+
+.w-min-content {
+	width: min-content;
+}
+
+.w-max-content {
+	width: max-content;
+}
+
+.w-fill-available {
+	width: fill-available;
+	width: -webkit-fill-available;
+}
+
+.h-fill-available {
+	height: fill-available;
+	height: -webkit-fill-available;
+}
+
+.white-space-pre-line {
+	white-space: pre-line;
+}
+
+.max-w-fit-content {
+	max-width: fit-content;
+}
+
+.border-dotted {
+	border-style: dotted;
+}
+
+.nav-link {
+	padding: 0.25rem !important;
+}
+
+form .form-control {
+	padding-inline: 0.25rem !important;
+	padding-block: 0.125rem !important;
+}
+
+.page-container {
+	max-width: 1724px;
+	margin: 0 auto;
+	padding-left: 10px;
+	padding-right: 10px;
+}

@@ -1,0 +1,3 @@
+https://laravel.su/docs/10.x/broadcasting
+
+https://docs.soketi.app/

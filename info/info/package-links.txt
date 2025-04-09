@@ -1,0 +1,21 @@
+IN THIS PROJECT:
+
+https://react-bootstrap.github.io/docs/components/accordion
+
+https://getbootstrap.com/docs/4.0/components/forms/
+
+https://icons.getbootstrap.com/
+
+https://react-select.com/styles
+
+https://konvajs.org/docs/drag_and_drop/Drag_and_Drop.html
+
+https://www.npmjs.com/package/@casl/ability
+
+https://metanit.com/web/react/6.4.php
+https://www.youtube.com/watch?v=wIyHSOugGGw
+
+
+
+OTHER:
+https://github.com/jquense/react-big-calendar

@@ -1,0 +1,38 @@
+.ticket-team-user-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+
+  &__select {
+    width: max-content;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    height: 48px;
+    > div:nth-child(2) {
+      height: 48px;
+    }
+    > div:nth-child(2) > div {
+      height: 48px;
+    }
+  }
+  &__select-user {
+    height: 100%;
+    > div {
+      height: 100%;
+    }
+  }
+  &__select-team-role {
+    height: 100%;
+    > select {
+      height: 100%;
+    }
+  }
+  &__select-hour {
+    height: 100%;
+    > input {
+      height: 100%;
+    }
+  }
+}
