@@ -12,13 +12,10 @@
       border-bottom: 1px solid darkgreen;
     }
 
-    .custom-input__icon {
-      color: black;
-    }
-
     .custom-input__field {
       color: black;
-
+      text-align: center;
+      
       &::placeholder {
         color: black;
         opacity: 0.5;
@@ -50,9 +47,9 @@
 
   &__label {
     position: absolute;
-    top: -25px;
-    left: 5px;
-    font-size: 16px;
+    top: -20px;
+    left: 0;
+    font-size: 14px;
     color: black;
     font-weight: 500;
   }
@@ -61,13 +58,6 @@
     display: flex;
     align-items: center;
     width: 100%;
-  }
-
-  &__icon {
-    max-height: 24px;
-    font-size: 24px;
-    transition: all 0.3s ease;
-    margin-right: 8px;
   }
 
   &__field {

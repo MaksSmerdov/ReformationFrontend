@@ -18,14 +18,18 @@
 
   &__container {
     padding-top: 10px;
-    display: flex;
+    display: grid;
     justify-content: center;
-    align-items: flex-start;
+    grid-template-columns: auto auto auto;
     gap: 20px;
+    align-items: stretch;
+
   }
 
   &__section {
-    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     padding: 15px;
     border: 1px solid #eee;
     border-radius: 4px;
@@ -39,6 +43,7 @@
   }
 
   &__inputs {
+    padding-top: 15px;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -60,14 +65,12 @@
     display: flex;
     gap: 5px;
     border-bottom: 1px solid #ddd;
-
   }
 
   &__actions {
     display: flex;
     flex-direction: row;
     gap: 5px;
-    border-top: 1px solid #eee;
     padding-top: 15px;
   }
 

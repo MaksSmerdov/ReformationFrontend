@@ -597,6 +597,39 @@
             "update_failure": "Päivitys epäonnistui",
             "update_success": "Päivitys onnistui"
           }
+        },
+        "view_apartment_page": {
+          "apartment_updated": "Tiedot päivitetty",
+          "back_button": "Takaisin",
+          "contacts": {
+            "title": "Yhteystiedot",
+            "add_new_contact": "Lisää uusi kontakti"
+          },
+          "add_contact_modal": {
+            "name": "Nimi",
+            "number": "Puh",
+            "email": "Email",
+            "type": "Tyyppi",
+            "resident": "Asukas",
+            "shareholder": "Osakas",
+            "owner": "Omistaja",
+            "save": "Tallenna",
+            "cancel": "Peruuta"
+          },
+          "edit_room": {
+            "edit_title": "Muokkaa asuntoa",
+            "apartament_number": "Huoneisto",
+            "mailbox": "Postilaatikko",
+            "description": "Kuvaus",
+            "submit": "Muuta tietoja",
+            "loading": "Ladataan muutoksia..."
+          },
+          "balcons": {
+            "balcons_title": "Parveketyypit",
+            "save": "Tallenna tämä asunto pohjaksi",
+            "save_vertical": "Tallenna pystylinjalle",
+            "save_horizontal": "Tallenna vaakalinjalle"
+          }
         }
       },
       "work_statuses": {

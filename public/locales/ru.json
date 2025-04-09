@@ -601,6 +601,39 @@
             "update_failure": "Обновление не удалось",
             "update_success": "Обновление успешно"
           }
+        },
+        "view_apartment_page": {
+          "apartment_updated": "Данные обновлены",
+          "back_button": "Назад",
+          "contacts": {
+            "title": "Контактная информация",
+            "add_new_contact": "Добавить новый контакт"
+          },
+          "add_contact_modal": {
+            "name": "Имя",
+            "number": "Телефон",
+            "email": "Почта",
+            "type": "Тип",
+            "resident": "Резидент",
+            "shareholder": "Акционер",
+            "owner": "Владелец",
+            "save": "Сохранить",
+            "cancel": "Отмена"
+          },
+          "edit_room": {
+            "edit_title": "Редактировать квартиру",
+            "apartament_number": "Номер квартиры",
+            "mailbox": "Почтовый ящик",
+            "description": "Описание",
+            "submit": "Изменить данные",
+            "loading": "Загрузка изменений..."
+          },
+          "balcons": {
+            "balcons_title": "Типы балконов",
+            "save": "Сохранить квартиру как базу",
+            "save_vertical": "Сохранить вертикально",
+            "save_horizontal": "Сохранить горизонтально"
+          }
         }
       },
       "work_statuses": {
