@@ -43,6 +43,7 @@ const ViewApartmentPageComponent = () => {
   if (!apartment) {
     return <Spinner animation="border"/>;
   }
+  console.log(apartment);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -110,8 +111,8 @@ const ViewApartmentPageComponent = () => {
         <section className={styles['apartment-view__section']}>
           <h2 className={styles['apartment-view__title']}>{t('balcons.balcons_title')}</h2>
           <div className={styles['apartment-view__balcony']}>
-            <CustomButton>Tyhjä asunto 2606</CustomButton>
-            <CustomButton>Tyhjä asunto 2606</CustomButton>
+            <CustomButton>{t('balcons.no_types')}</CustomButton>
+            <CustomButton>{t('balcons.empty_apartment')}</CustomButton>
           </div>
           <div className={styles['apartment-view__actions']}>
             <CustomButton>{t('balcons.save')}</CustomButton>

@@ -626,6 +626,8 @@
           },
           "balcons": {
             "balcons_title": "Parveketyypit",
+            "no_types": "Ei tyyppiä",
+            "empty_apartment": "Tyhjä asunto 2606",
             "save": "Tallenna tämä asunto pohjaksi",
             "save_vertical": "Tallenna pystylinjalle",
             "save_horizontal": "Tallenna vaakalinjalle"
