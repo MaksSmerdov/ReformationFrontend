@@ -11,6 +11,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchApartmentById, updateApartment } from '@slices/rooms/apartmentsSlice.js';
 import { Spinner } from 'react-bootstrap';
 import { useNotification } from '@contexts/application/NotificationContext.jsx';
+import RoomsConfiguration
+  from '@components/project/rooms/view_apartment_page/components/RoomsConfiguration/RoomsConfiguration.jsx';
 
 const ViewApartmentPageComponent = () => {
   const { projectId, staircaseId, apartmentId } = useParams();
@@ -19,6 +21,7 @@ const ViewApartmentPageComponent = () => {
   const { t } = useTranslation('translation', { keyPrefix: 'components.project.rooms.view_apartment_page' });
   const { addNotification } = useNotification();
   const apartment = useSelector((state) => state.apartments.byId[apartmentId]);
+  console.log(apartment);
 
   const [number, setNumber] = useState('');
   const [mailboxName, setMailboxName] = useState('');
@@ -91,11 +94,6 @@ const ViewApartmentPageComponent = () => {
                 value={mailboxName}
                 onChange={(e) => setMailboxName(e.target.value)}
               />
-              <CustomInput
-                label={t('edit_room.description')}
-                value={description}
-                onChange={(e) => setDescription(e.target.value)}
-              />
             </div>
             <div className={styles['apartment-view__inputs-btn']}>
               <CustomButton type="submit" disabled={isSubmitting}>
@@ -120,11 +118,15 @@ const ViewApartmentPageComponent = () => {
             <CustomButton>{t('balcons.save_horizontal')}</CustomButton>
           </div>
         </section>
-        <AddContactModal
-          isOpen={isContactModalOpen}
-          onClose={() => setIsContactModalOpen(false)}
-        />
+
       </div>
+      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        <RoomsConfiguration/>
+      </div>
+      <AddContactModal
+        isOpen={isContactModalOpen}
+        onClose={() => setIsContactModalOpen(false)}
+      />
     </div>
   );
 };

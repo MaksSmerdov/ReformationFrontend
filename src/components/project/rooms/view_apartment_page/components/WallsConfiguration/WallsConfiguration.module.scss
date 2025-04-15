@@ -1,0 +1,22 @@
+.walls-table {
+  width: 100%;
+  border-collapse: collapse;
+
+  &__header {
+    background: #f0f0f0;
+  }
+
+  &__header-row {
+    text-align: center;
+  }
+
+  &__cell {
+    border: 1px solid #ccc;
+    padding: 8px;
+
+    &--order {
+      width: 50px;
+      text-align: center;
+    }
+  }
+}
