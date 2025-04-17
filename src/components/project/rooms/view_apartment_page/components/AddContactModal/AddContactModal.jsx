@@ -36,7 +36,7 @@ const AddContactModal = ({ isOpen, onClose }) => {
           <CustomButton variant="secondary" onClick={onClose}>
             {t('cancel')}
           </CustomButton>
-          <CustomButton>
+          <CustomButton variant="submit">
             {t('save')}
           </CustomButton>
         </div>

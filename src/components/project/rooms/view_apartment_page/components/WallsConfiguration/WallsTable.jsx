@@ -1,6 +1,7 @@
 import React from 'react';
 import CustomInput from '@components/project/rooms/view_apartment_page/ui/CustomInput/CustomInput.jsx';
 import styles from './WallsConfiguration.module.scss';
+import CustomButton from '@components/project/rooms/view_apartment_page/ui/CustomButton/CustomButton.jsx';
 
 const WallsTable = ({ shapes, onShapesChange }) => {
   const handleNameChange = (id, newName) => {
@@ -66,6 +67,9 @@ const WallsTable = ({ shapes, onShapesChange }) => {
         ))}
         </tbody>
       </table>
+      <div style={{ paddingTop: '15px' }}>
+        <CustomButton>Avaa asunnon tilaustaulu</CustomButton>
+      </div>
     </div>
 
   );

@@ -88,7 +88,7 @@ const WallsConfiguration = ({ shapes, setShapes }) => {
 
   return (
     <div style={{ position: 'relative' }} ref={containerRef}>
-      <Stage width={1000} height={750} draggable>
+      <Stage width={1000} height={750}>
         <Layer>
           {sortedShapes.map((shape) => {
             const scaledWidth = shape.width * scaleFactor;

@@ -9,8 +9,8 @@ import styles from './RoomsConfiguration.module.scss';
 const roomScale = 0.045;
 const plusButtonRadius = 10;
 const plusButtonGap = 5;
-const roomGap = 50;
-const tolerance = roomGap + 5;
+const roomGap = 60;
+const tolerance = roomGap + 25;
 
 const shouldRenderPlusButton = (room, dir, rooms) => {
   const m = getRoomMetrics(room.walls);
