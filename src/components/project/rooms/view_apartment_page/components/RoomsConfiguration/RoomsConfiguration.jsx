@@ -42,9 +42,19 @@ const shouldRenderPlusButton = (room, dir, rooms) => {
 };
 
 export default function RoomsConfiguration () {
-  const [rooms, setRooms] = useState([
-    createRoom('room1', 'Комната 1', 400, 325),
-  ]);
+  // Центрируем первую комнату
+  const [rooms, setRooms] = useState(() => {
+    const initial = createRoom('room1', 'Комната 1', 0, 0);
+    const m = getRoomMetrics(initial.walls);
+    const rw = m.width * roomScale;
+    const rh = m.height * roomScale;
+    initial.position = {
+      x: innerWidth / 2 - rw / 2,
+      y: innerHeight / 2 - rh / 2,
+    };
+    return [initial];
+  });
+
   const [selectedRoomId, setSelectedRoomId] = useState(null);
   const [editingName, setEditingName] = useState(null);
 
@@ -78,22 +88,21 @@ export default function RoomsConfiguration () {
       case 'down':
         ny += ph + roomGap;
         break;
-      default:
-        break;
     }
 
     const idx = getNextRoomIndex();
-    const newId = `room${idx}`;
-    const newName = `Комната ${idx}`;
-    const wallsClone = JSON.parse(JSON.stringify(parent.walls));
+    const newRoom = createRoom(
+      `room${idx}`,
+      `Комната ${idx}`,
+      nx,
+      ny,
+      JSON.parse(JSON.stringify(parent.walls)),
+    );
 
-    setRooms(prev => [
-      ...prev,
-      createRoom(newId, newName, nx, ny, wallsClone),
-    ]);
+    setRooms(prev => [...prev, newRoom]);
   };
 
-  const deleteRoom = (roomId) => {
+  const deleteRoom = roomId => {
     setRooms(prev => {
       if (prev.length <= 1) return prev;
       const next = prev.filter(r => r.id !== roomId);
@@ -102,9 +111,9 @@ export default function RoomsConfiguration () {
     });
   };
 
-  const toggleCollapsed = (roomId) =>
+  const toggleCollapsed = roomId =>
     setRooms(prev =>
-      prev.map(r => r.id === roomId ? { ...r, collapsed: !r.collapsed } : r),
+      prev.map(r => (r.id === roomId ? { ...r, collapsed: !r.collapsed } : r)),
     );
 
   const backToRooms = () => setSelectedRoomId(null);
@@ -114,8 +123,8 @@ export default function RoomsConfiguration () {
       <Group
         x={cx}
         y={cy}
-        onMouseEnter={e => e.target.getStage().container().style.cursor = 'pointer'}
-        onMouseLeave={e => e.target.getStage().container().style.cursor = 'default'}
+        onMouseEnter={e => (e.target.getStage().container().style.cursor = 'pointer')}
+        onMouseLeave={e => (e.target.getStage().container().style.cursor = 'default')}
         onClick={e => {
           e.cancelBubble = true;
           addRoom(parentId, dir);
@@ -129,7 +138,7 @@ export default function RoomsConfiguration () {
   if (!selectedRoomId) {
     return (
       <div className={styles['rooms-konva-container']} style={{ border: '1px solid grey' }}>
-        <Stage width={1000} height={750} draggable>
+        <Stage width={innerWidth} height={innerHeight} draggable>
           <Layer>
             {rooms.map(room => {
               const { id, name, position, walls, collapsed } = room;
@@ -140,6 +149,7 @@ export default function RoomsConfiguration () {
 
               return (
                 <Group key={id} x={position.x} y={position.y}>
+                  {/* тело комнаты */}
                   <Rect
                     width={rwpx}
                     height={rhpx}
@@ -147,58 +157,81 @@ export default function RoomsConfiguration () {
                     stroke="#000"
                     strokeWidth={1}
                     onDblClick={() => setSelectedRoomId(id)}
-                    onMouseEnter={e => e.target.getStage().container().style.cursor = 'pointer'}
-                    onMouseLeave={e => e.target.getStage().container().style.cursor = 'default'}
+                    onMouseEnter={e => (e.target.getStage().container().style.cursor = 'pointer')}
+                    onMouseLeave={e => (e.target.getStage().container().style.cursor = 'default')}
                   />
+
+                  {/* название */}
                   {!collapsed && (
                     <Text
                       text={name}
                       fontSize={14}
                       x={rwpx / 2}
                       y={rhpx / 2}
-                      offsetX={name.length * 7 / 2}
+                      offsetX={(name.length * 7) / 2}
                       offsetY={7}
-                      onDblClick={e => {
-                        const rect = e.target.getStage().container().getBoundingClientRect();
-                        setEditingName({
-                          roomId: id,
-                          value: name,
-                          x: rect.left + position.x + rwpx / 2 - 50,
-                          y: rect.top + position.y + rhpx / 2 - 10,
-                        });
-                      }}
-                      onMouseEnter={e => e.target.getStage().container().style.cursor = 'pointer'}
-                      onMouseLeave={e => e.target.getStage().container().style.cursor = 'default'}
+                      onMouseEnter={e => (e.target.getStage().container().style.cursor = 'pointer')}
+                      onMouseLeave={e => (e.target.getStage().container().style.cursor = 'default')}
                     />
                   )}
-                  {rooms.length > 1 && (
+
+                  {/* кнопка удаления */}
+                  {!collapsed && rooms.length > 1 && (
                     <Text
                       text="✕"
                       fontSize={16}
                       fill="red"
-                      x={2}
+                      x={4}
                       y={-20}
-                      onMouseEnter={e => e.target.getStage().container().style.cursor = 'pointer'}
-                      onMouseLeave={e => e.target.getStage().container().style.cursor = 'default'}
+                      onMouseEnter={e => (e.target.getStage().container().style.cursor = 'pointer')}
+                      onMouseLeave={e => (e.target.getStage().container().style.cursor = 'default')}
                       onClick={e => {
                         e.cancelBubble = true;
                         deleteRoom(id);
                       }}
                     />
                   )}
+
+                  {/* иконка редактирования */}
+                  {!collapsed && (
+                    <Text
+                      text="✏️"
+                      fontSize={14}
+                      x={rwpx - 44}
+                      y={-20}
+                      onMouseEnter={e => (e.target.getStage().container().style.cursor = 'pointer')}
+                      onMouseLeave={e => (e.target.getStage().container().style.cursor = 'default')}
+                      onClick={e => {
+                        e.cancelBubble = true;
+                        const stage = e.target.getStage();
+                        const container = stage.container().getBoundingClientRect();
+                        const groupPos = e.target.getParent().getAbsolutePosition();
+                        setEditingName({
+                          roomId: id,
+                          value: name,
+                          x: container.left + groupPos.x + rwpx / 2 - 50,
+                          y: container.top + groupPos.y + rhpx / 2 - 10,
+                        });
+                      }}
+                    />
+                  )}
+
+                  {/* иконка видимости */}
                   <Text
                     text={collapsed ? '🙈' : '👁'}
                     fontSize={16}
                     fill="blue"
                     x={rwpx - 22}
                     y={-20}
-                    onMouseEnter={e => e.target.getStage().container().style.cursor = 'pointer'}
-                    onMouseLeave={e => e.target.getStage().container().style.cursor = 'default'}
+                    onMouseEnter={e => (e.target.getStage().container().style.cursor = 'pointer')}
+                    onMouseLeave={e => (e.target.getStage().container().style.cursor = 'default')}
                     onClick={e => {
                       e.cancelBubble = true;
                       toggleCollapsed(id);
                     }}
                   />
+
+                  {/* плюсы для добавления соседних комнат */}
                   {!collapsed && (
                     <>
                       {renderPlus(rwpx / 2, -plusButtonRadius - plusButtonGap, 'up', id, room)}
@@ -207,21 +240,23 @@ export default function RoomsConfiguration () {
                       {renderPlus(rwpx + plusButtonRadius + plusButtonGap, rhpx / 2, 'right', id, room)}
                     </>
                   )}
+
+                  {/* измерения чуть ниже */}
                   {!collapsed && (
                     <>
                       <Text
-                        text={`${m.areaM2.toFixed(1)} м²`}
-                        fontSize={12}
+                        text={`Площадь: ${m.areaM2.toFixed(1)} м²`}
+                        fontSize={14}
                         fill="#555"
                         x={4}
-                        y={rhpx + 4}
+                        y={rhpx - 35}
                       />
                       <Text
-                        text={`Ш: ${(m.width / 1000).toFixed(2)} м  В: ${(m.height / 1000).toFixed(2)} м`}
-                        fontSize={12}
+                        text={`Ш: ${m.width} мм,  В: ${m.height} мм`}
+                        fontSize={14}
                         fill="#555"
                         x={4}
-                        y={rhpx + 18}
+                        y={rhpx - 15}
                       />
                     </>
                   )}
@@ -276,11 +311,7 @@ export default function RoomsConfiguration () {
         shapes={selectedRoom.walls}
         setShapes={newWalls =>
           setRooms(prev =>
-            prev.map(r =>
-              r.id === selectedRoomId
-                ? { ...r, walls: newWalls }
-                : r,
-            ),
+            prev.map(r => (r.id === selectedRoomId ? { ...r, walls: newWalls } : r)),
           )
         }
       />

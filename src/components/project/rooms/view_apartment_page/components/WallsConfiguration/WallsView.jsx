@@ -82,7 +82,7 @@ const WallsView = () => {
   const [shapes, setShapes] = useState(initialShapes);
 
   return (
-    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '1rem' }}>
       <WallsTable shapes={shapes} onShapesChange={setShapes}/>
       <WallsConfiguration shapes={shapes} setShapes={setShapes}/>
     </div>
