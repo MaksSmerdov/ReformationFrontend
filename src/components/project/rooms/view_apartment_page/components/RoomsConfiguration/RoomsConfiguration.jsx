@@ -17,7 +17,6 @@ const shouldRenderPlusButton = (room, dir, rooms) => {
   const rw = m.width * roomScale;
   const rh = m.height * roomScale;
   const { x, y } = room.position;
-
   const box1 = { l: x, r: x + rw, t: y, b: y + rh };
 
   return !rooms.some(o => {
@@ -25,26 +24,17 @@ const shouldRenderPlusButton = (room, dir, rooms) => {
     const om = getRoomMetrics(o.walls);
     const ow = om.width * roomScale;
     const oh = om.height * roomScale;
-    const box2 = {
-      l: o.position.x,
-      r: o.position.x + ow,
-      t: o.position.y,
-      b: o.position.y + oh,
-    };
+    const box2 = { l: o.position.x, r: o.position.x + ow, t: o.position.y, b: o.position.y + oh };
 
     switch (dir) {
       case 'right':
-        return Math.abs(box1.r - box2.l) < tolerance &&
-          !(box2.t >= box1.b || box2.b <= box1.t);
+        return Math.abs(box1.r - box2.l) < tolerance && !(box2.t >= box1.b || box2.b <= box1.t);
       case 'left':
-        return Math.abs(box1.l - box2.r) < tolerance &&
-          !(box2.t >= box1.b || box2.b <= box1.t);
+        return Math.abs(box1.l - box2.r) < tolerance && !(box2.t >= box1.b || box2.b <= box1.t);
       case 'up':
-        return Math.abs(box1.t - box2.b) < tolerance &&
-          !(box2.l >= box1.r || box2.r <= box1.l);
+        return Math.abs(box1.t - box2.b) < tolerance && !(box2.l >= box1.r || box2.r <= box1.l);
       case 'down':
-        return Math.abs(box1.b - box2.t) < tolerance &&
-          !(box2.l >= box1.r || box2.r <= box1.l);
+        return Math.abs(box1.b - box2.t) < tolerance && !(box2.l >= box1.r || box2.r <= box1.l);
       default:
         return false;
     }
@@ -53,10 +43,17 @@ const shouldRenderPlusButton = (room, dir, rooms) => {
 
 export default function RoomsConfiguration () {
   const [rooms, setRooms] = useState([
-    createRoom('room1', 'Комната 1', 400, 325),
+    createRoom('room1', 'Комната 1', 400, 325),
   ]);
   const [selectedRoomId, setSelectedRoomId] = useState(null);
   const [editingName, setEditingName] = useState(null);
+
+  const getNextRoomIndex = () => {
+    const used = rooms.map(r => parseInt(r.id.replace(/^room/, ''), 10)).filter(n => !isNaN(n));
+    let i = 1;
+    while (used.includes(i)) i++;
+    return i;
+  };
 
   const addRoom = (parentId, dir) => {
     const parent = rooms.find(r => r.id === parentId);
@@ -65,7 +62,6 @@ export default function RoomsConfiguration () {
     const pm = getRoomMetrics(parent.walls);
     const pw = pm.width * roomScale;
     const ph = pm.height * roomScale;
-
     let nx = parent.position.x;
     let ny = parent.position.y;
 
@@ -86,10 +82,14 @@ export default function RoomsConfiguration () {
         break;
     }
 
-    const newId = `room${rooms.length + 1}`;
+    const idx = getNextRoomIndex();
+    const newId = `room${idx}`;
+    const newName = `Комната ${idx}`;
+    const wallsClone = JSON.parse(JSON.stringify(parent.walls));
+
     setRooms(prev => [
       ...prev,
-      createRoom(newId, `Комната ${rooms.length + 1}`, nx, ny, parent.walls),
+      createRoom(newId, newName, nx, ny, wallsClone),
     ]);
   };
 
@@ -103,9 +103,9 @@ export default function RoomsConfiguration () {
   };
 
   const toggleCollapsed = (roomId) =>
-    setRooms(prev => prev.map(r =>
-      r.id === roomId ? { ...r, collapsed: !r.collapsed } : r,
-    ));
+    setRooms(prev =>
+      prev.map(r => r.id === roomId ? { ...r, collapsed: !r.collapsed } : r),
+    );
 
   const backToRooms = () => setSelectedRoomId(null);
 
@@ -150,7 +150,6 @@ export default function RoomsConfiguration () {
                     onMouseEnter={e => e.target.getStage().container().style.cursor = 'pointer'}
                     onMouseLeave={e => e.target.getStage().container().style.cursor = 'default'}
                   />
-
                   {!collapsed && (
                     <Text
                       text={name}
@@ -172,7 +171,6 @@ export default function RoomsConfiguration () {
                       onMouseLeave={e => e.target.getStage().container().style.cursor = 'default'}
                     />
                   )}
-
                   {rooms.length > 1 && (
                     <Text
                       text="✕"
@@ -188,7 +186,6 @@ export default function RoomsConfiguration () {
                       }}
                     />
                   )}
-
                   <Text
                     text={collapsed ? '🙈' : '👁'}
                     fontSize={16}
@@ -202,7 +199,6 @@ export default function RoomsConfiguration () {
                       toggleCollapsed(id);
                     }}
                   />
-
                   {!collapsed && (
                     <>
                       {renderPlus(rwpx / 2, -plusButtonRadius - plusButtonGap, 'up', id, room)}
@@ -211,7 +207,6 @@ export default function RoomsConfiguration () {
                       {renderPlus(rwpx + plusButtonRadius + plusButtonGap, rhpx / 2, 'right', id, room)}
                     </>
                   )}
-
                   {!collapsed && (
                     <>
                       <Text
@@ -238,14 +233,23 @@ export default function RoomsConfiguration () {
 
         {editingName && (
           <input
-            className={`${styles['rooms-name-input']}`}
-            style={{ position: 'fixed', top: editingName.y, left: editingName.x, width: 100 }}
+            className={styles['rooms-name-input']}
+            style={{
+              position: 'fixed',
+              top: editingName.y,
+              left: editingName.x,
+              width: 100,
+            }}
             value={editingName.value}
             onChange={e => setEditingName({ ...editingName, value: e.target.value })}
             onBlur={() => {
-              setRooms(prev => prev.map(r =>
-                r.id === editingName.roomId ? { ...r, name: editingName.value } : r,
-              ));
+              setRooms(prev =>
+                prev.map(r =>
+                  r.id === editingName.roomId
+                    ? { ...r, name: editingName.value }
+                    : r,
+                ),
+              );
               setEditingName(null);
             }}
             onKeyDown={e => {
@@ -265,17 +269,19 @@ export default function RoomsConfiguration () {
   return (
     <div className={styles['walls-view-container']}>
       <h3>{selectedRoom.name}</h3>
-
       <CustomButton onClick={backToRooms} style={{ marginBottom: '1rem' }}>
         Вернуться к комнатам
       </CustomButton>
-
       <WallsView
         shapes={selectedRoom.walls}
         setShapes={newWalls =>
-          setRooms(prev => prev.map(r =>
-            r.id === selectedRoomId ? { ...r, walls: newWalls } : r,
-          ))
+          setRooms(prev =>
+            prev.map(r =>
+              r.id === selectedRoomId
+                ? { ...r, walls: newWalls }
+                : r,
+            ),
+          )
         }
       />
     </div>
