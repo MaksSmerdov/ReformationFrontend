@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import CustomInput from '@components/project/rooms/view_apartment_page/ui/CustomInput/CustomInput.jsx';
 import styles from './WallsConfiguration.module.scss';
 import CustomButton from '@components/project/rooms/view_apartment_page/ui/CustomButton/CustomButton.jsx';
+import CustomModal from '@components/project/rooms/view_apartment_page/ui/CustomModal/CustomModal.jsx';
 
 const WallsTable = ({ shapes, onShapesChange }) => {
+  const [isExcelModalOpen, setIsExcelModalOpen] = useState(false);
+
   const handleNameChange = (id, newName) => {
     const updatedShapes = shapes.map((shape) =>
       shape.id === id ? { ...shape, name: newName } : shape,
@@ -31,14 +34,14 @@ const WallsTable = ({ shapes, onShapesChange }) => {
   return (
     <div>
       <h2>Название</h2>
-      <table className={`${styles['walls-table']}`}>
-        <tbody className={`${styles['walls-table__body']}`}>
+      <table className={styles['walls-table']}>
+        <tbody className={styles['walls-table__body']}>
         {shapes.map((shape) => (
-          <tr key={shape.id} className={`${styles['walls-table__row']}`}>
+          <tr key={shape.id} className={styles['walls-table__row']}>
             <td className={`${styles['walls-table__cell']} ${styles['walls-table__cell--order']}`}>
               <CustomInput
                 type="number"
-                className={`${styles['walls-table__input']}`}
+                className={styles['walls-table__input']}
                 style={{ width: '40px' }}
                 value={shape.order}
                 onChange={(e) => handleOrderChange(shape.id, e.target.value)}
@@ -47,19 +50,19 @@ const WallsTable = ({ shapes, onShapesChange }) => {
             <td className={`${styles['walls-table__cell']} ${styles['walls-table__cell--name']}`}>
               <CustomInput
                 type="text"
-                className={`${styles['walls-table__input']}`}
+                className={styles['walls-table__input']}
+                style={{ width: '100%' }}
                 value={shape.name}
                 onChange={(e) => handleNameChange(shape.id, e.target.value)}
-                style={{ width: '100%' }}
               />
             </td>
             <td className={`${styles['walls-table__cell']} ${styles['walls-table__cell--description']}`}>
               <CustomInput
                 type="text"
-                className={`${styles['walls-table__input']}`}
+                className={styles['walls-table__input']}
+                style={{ width: '100%' }}
                 value={shape.description || ''}
                 onChange={(e) => handleDescriptionChange(shape.id, e.target.value)}
-                style={{ width: '100%' }}
                 placeholder="Описание"
               />
             </td>
@@ -67,11 +70,20 @@ const WallsTable = ({ shapes, onShapesChange }) => {
         ))}
         </tbody>
       </table>
-      <div style={{ paddingTop: '15px' }}>
-        <CustomButton>Avaa asunnon tilaustaulu</CustomButton>
-      </div>
-    </div>
 
+      <div style={{ paddingTop: '15px' }}>
+        <CustomButton onClick={() => setIsExcelModalOpen(true)}>
+          Avaa asunnon tilaustaulu
+        </CustomButton>
+      </div>
+
+      <CustomModal
+        isOpen={isExcelModalOpen}
+        onClose={() => setIsExcelModalOpen(false)}
+      >
+        <p>Здесь будет Excel</p>
+      </CustomModal>
+    </div>
   );
 };
 

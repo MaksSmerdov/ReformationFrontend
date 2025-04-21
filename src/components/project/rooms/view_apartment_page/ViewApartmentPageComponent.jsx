@@ -7,6 +7,7 @@ import CustomButton from '@components/project/rooms/view_apartment_page/ui/Custo
 import CustomInput from '@components/project/rooms/view_apartment_page/ui/CustomInput/CustomInput.jsx';
 import AddContactModal
   from '@components/project/rooms/view_apartment_page/components/AddContactModal/AddContactModal.jsx';
+import CustomModal from '@components/project/rooms/view_apartment_page/ui/CustomModal/CustomModal.jsx';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchApartmentById, updateApartment } from '@slices/rooms/apartmentsSlice.js';
 import { Spinner } from 'react-bootstrap';
@@ -21,7 +22,6 @@ const ViewApartmentPageComponent = () => {
   const { t } = useTranslation('translation', { keyPrefix: 'components.project.rooms.view_apartment_page' });
   const { addNotification } = useNotification();
   const apartment = useSelector((state) => state.apartments.byId[apartmentId]);
-  console.log(apartment);
 
   const [number, setNumber] = useState('');
   const [mailboxName, setMailboxName] = useState('');
@@ -71,9 +71,13 @@ const ViewApartmentPageComponent = () => {
     <div className={styles['apartment-view']}>
       <div className={styles['apartment-view__top']}>
         <ViewApartmentBreadcrumb projectId={projectId} staircaseId={staircaseId} apartmentId={apartmentId}/>
-        <CustomButton variant="secondary" onClick={handleBackClick}>{t('back_button')}</CustomButton>
+        <CustomButton variant="secondary" onClick={handleBackClick}>
+          {t('back_button')}
+        </CustomButton>
       </div>
+
       <div className={styles['apartment-view__container']}>
+        {/* Контакты */}
         <section className={styles['apartment-view__section']}>
           <h2 className={styles['apartment-view__title']}>{t('contacts.title')}</h2>
           <span>, , , hankkeen_johtaja</span>
@@ -83,6 +87,8 @@ const ViewApartmentPageComponent = () => {
             {t('contacts.add_new_contact')}
           </CustomButton>
         </section>
+
+        {/* Редактирование */}
         <section className={styles['apartment-view__section']}>
           <h2 className={styles['apartment-view__title']}>{t('edit_room.edit_title')}</h2>
           <form className={styles['apartment-view__inputs']} onSubmit={handleSubmit}>
@@ -100,15 +106,13 @@ const ViewApartmentPageComponent = () => {
             </div>
             <div className={styles['apartment-view__inputs-btn']}>
               <CustomButton type="submit" variant="submit" disabled={isSubmitting}>
-                {isSubmitting ? (
-                  t('edit_room.loading')
-                ) : (
-                  t('edit_room.submit')
-                )}
+                {isSubmitting ? t('edit_room.loading') : t('edit_room.submit')}
               </CustomButton>
             </div>
           </form>
         </section>
+
+        {/* Балконы */}
         <section className={styles['apartment-view__section']}>
           <h2 className={styles['apartment-view__title']}>{t('balcons.balcons_title')}</h2>
           <div className={styles['apartment-view__balcony']}>
@@ -121,36 +125,51 @@ const ViewApartmentPageComponent = () => {
             <CustomButton>{t('balcons.save_horizontal')}</CustomButton>
           </div>
         </section>
-        <section className={styles['apartment-view__section']}
-                 style={{ gap: '20px' }}>
+
+        {/* Доп. информация */}
+        <section className={styles['apartment-view__section']} style={{ gap: '20px' }}>
           <div>
-            <h2 className={styles['apartment-view__subtitle']}>
-              Tiedot projektista
-            </h2>
+            <h2 className={styles['apartment-view__subtitle']}>Tiedot projektista</h2>
             <span>Контент</span>
           </div>
           <div>
-            <h2 className={styles['apartment-view__subtitle']}>
-              Tiedot huoneesta
-            </h2>
+            <h2 className={styles['apartment-view__subtitle']}>Tiedot huoneesta</h2>
             <span>Контент</span>
           </div>
           <div>
-            <h2 className={styles['apartment-view__subtitle']}>
-              Tiedot tekijästä
-            </h2>
+            <h2 className={styles['apartment-view__subtitle']}>Tiedot tekijästä</h2>
             <span>Контент</span>
           </div>
         </section>
-        <div className={styles['apartment-view__file-btn']}><CustomButton>Asunnon tiedostopankki</CustomButton></div>
+
+        {/* Кнопка открытия файлового модала */}
+        <div className={styles['apartment-view__file-btn']}>
+          <CustomButton onClick={() => setIsFileModalOpen(true)}>
+            Asunnon tiedostopankki
+          </CustomButton>
+        </div>
       </div>
+
+      {/* Конфигурация комнат */}
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', paddingTop: '30px' }}>
-        <RoomsConfiguration/>
+        <RoomsConfiguration shapes={apartment.shapes} setShapes={(newShapes) => {
+          /* если нужно сохранять изменения, можно диспатчить updateApartment */
+        }}/>
       </div>
+
+      {/* Модалка добавления контакта */}
       <AddContactModal
         isOpen={isContactModalOpen}
         onClose={() => setIsContactModalOpen(false)}
       />
+
+      {/* Модалка файлов */}
+      <CustomModal
+        isOpen={isFileModalOpen}
+        onClose={() => setIsFileModalOpen(false)}
+      >
+        <p>Здесь будут файлы</p>
+      </CustomModal>
     </div>
   );
 };
