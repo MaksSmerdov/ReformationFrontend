@@ -50,3 +50,10 @@
     box-shadow: 2px 2px 8px 2px green;
   }
 }
+
+@media (max-width: 1400px) {
+  .button {
+    padding: 2px 4px;
+    font-size: 12px;
+  }
+}

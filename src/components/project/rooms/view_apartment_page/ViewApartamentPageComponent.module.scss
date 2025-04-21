@@ -96,5 +96,62 @@
     align-items: flex-start;
 
   }
+}
 
+@media (max-width: 1400px) {
+  .apartment-view {
+    padding: 5px 10px;
+
+    &__container {
+      padding-top: 5px;
+      flex-direction: row;
+      flex: 1;
+      gap: 20px;
+    }
+
+    &__section {
+      padding: 5px;
+    }
+
+    &__title {
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+
+    &__subtitle {
+      padding-bottom: 10px;
+      font-size: 12px;
+    }
+
+    &__inputs {
+      padding-top: 0;
+      gap: 5px;
+
+      &-row {
+        gap: 30px;
+        flex-direction: column;
+      }
+
+    }
+
+    &__balcony {
+      padding-bottom: 15px;
+    }
+
+    &__actions {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 10px;
+      padding-top: 15px;
+    }
+
+    &__file-btn {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-start;
+    }
+  }
 }

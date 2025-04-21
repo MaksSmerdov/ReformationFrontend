@@ -42,14 +42,13 @@ const shouldRenderPlusButton = (room, dir, rooms) => {
 };
 
 export default function RoomsConfiguration () {
-  // Центрируем первую комнату
   const [rooms, setRooms] = useState(() => {
     const initial = createRoom('room1', 'Комната 1', 0, 0);
     const m = getRoomMetrics(initial.walls);
     const rw = m.width * roomScale;
     const rh = m.height * roomScale;
     initial.position = {
-      x: innerWidth / 2 - rw / 2,
+      x: 1200 / 2 - rw / 2,
       y: innerHeight / 2 - rh / 2,
     };
     return [initial];
@@ -138,7 +137,7 @@ export default function RoomsConfiguration () {
   if (!selectedRoomId) {
     return (
       <div className={styles['rooms-konva-container']} style={{ border: '1px solid grey' }}>
-        <Stage width={innerWidth} height={innerHeight} draggable>
+        <Stage width={1200} height={innerHeight} draggable>
           <Layer>
             {rooms.map(room => {
               const { id, name, position, walls, collapsed } = room;
@@ -218,7 +217,7 @@ export default function RoomsConfiguration () {
 
                   {/* иконка видимости */}
                   <Text
-                    text={collapsed ? '🙈' : '👁'}
+                    text={collapsed ? 'X' : '👁'}
                     fontSize={16}
                     fill="blue"
                     x={rwpx - 22}
@@ -241,7 +240,6 @@ export default function RoomsConfiguration () {
                     </>
                   )}
 
-                  {/* измерения чуть ниже */}
                   {!collapsed && (
                     <>
                       <Text

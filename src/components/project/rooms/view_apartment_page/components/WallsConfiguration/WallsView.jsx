@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import WallsTable from '@components/project/rooms/view_apartment_page/components/WallsConfiguration/WallsTable.jsx';
 import WallsConfiguration
   from '@components/project/rooms/view_apartment_page/components/WallsConfiguration/WallsConfiguration.jsx';
+import styles from './WallsConfiguration.module.scss';
 
 const initialShapes = [
   {
@@ -82,7 +83,7 @@ const WallsView = () => {
   const [shapes, setShapes] = useState(initialShapes);
 
   return (
-    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '1rem' }}>
+    <div className={`${styles['walls__view-container']}`}>
       <WallsTable shapes={shapes} onShapesChange={setShapes}/>
       <WallsConfiguration shapes={shapes} setShapes={setShapes}/>
     </div>

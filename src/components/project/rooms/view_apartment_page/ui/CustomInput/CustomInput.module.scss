@@ -15,7 +15,7 @@
     .custom-input__field {
       color: black;
       text-align: center;
-      
+
       &::placeholder {
         color: black;
         opacity: 0.5;
@@ -67,4 +67,21 @@
     outline: none;
     padding: 5px 0;
   }
+}
+
+@media (max-width: 1400px) {
+  .custom-input {
+    padding: 2px 4px;
+
+    &__label {
+      font-size: 12px;
+      font-weight: 500;
+    }
+
+    &__field {
+      font-size: 12px;
+      padding: 2px 0;
+    }
+  }
+
 }
